@@ -1,17 +1,7 @@
 import { Check } from "lucide-react";
-
-const features = [
-  "Far-infrared wavelength (5.6-15 microns)",
-  "360° full-body heat coverage",
-  "Low EMF",
-  "Patented semiconductor technology",
-  "Dual heating zones",
-  "Heats up within 2 minutes"
-];
-
+const features = ["Far-infrared wavelength (5.6-15 microns)", "360° full-body heat coverage", "Low EMF certified panels", "Medical-grade materials", "Dual heating zones", "Digital temperature control"];
 const DifferenceSection = () => {
-  return (
-    <section className="section-dark py-20 md:py-28">
+  return <section className="section-dark py-20 md:py-28">
       <div className="container-section">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Features */}
@@ -27,14 +17,12 @@ const DifferenceSection = () => {
             </p>
 
             <ul className="space-y-4">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-4 text-white/90">
+              {features.map((feature, index) => <li key={index} className="flex items-center gap-4 text-white/90">
                   <div className="w-6 h-6 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
                     <Check size={14} className="text-white" />
                   </div>
                   <span>{feature}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -50,9 +38,9 @@ const DifferenceSection = () => {
               </h3>
               
               <p className="text-white/70 mb-6">
-                Our carbon fiber emitters produce far-infrared heat at the optimal wavelength 
-                (5.6-15 microns) that penetrates up to 1.5 inches into tissue. This delivers 
-                therapeutic benefits that traditional saunas simply cannot match.
+                Thermal Effect: FIR energy is absorbed by water molecules and tissues, creating gentle, deep heat. 
+
+Physiological Response: This warmth causes vasodilation (widening of blood vessels), increasing blood flow, oxygen, and nutrient delivery to cells, which aids in recovery and detoxification.  
               </p>
 
               <div className="grid grid-cols-2 gap-6">
@@ -72,8 +60,6 @@ const DifferenceSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default DifferenceSection;
