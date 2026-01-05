@@ -205,7 +205,7 @@ const ProductPageLayout = () => {
               {/* Ships By */}
               <div className="flex items-center gap-3 mb-4 pb-4 border-b border-border">
                 <Truck className="text-foreground" size={16} />
-                <span className="font-semibold text-foreground text-sm">Ships by Jan 12th</span>
+                <span className="font-semibold text-foreground text-sm">Ships within 5 Business Days</span>
                 <span className="inline-flex items-center gap-1 text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full ml-auto">
                   <Check size={12} />
                   In Stock
