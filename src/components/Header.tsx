@@ -41,10 +41,10 @@ const Header = () => {
             <a href="https://store.healingsauna.com" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
               The Sauna
             </a>
-            <a href="https://www.healingsauna.com/black-sauna#research" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
+            <a href="https://www.healingsauna.com/research" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
               Research
             </a>
-            <a href="https://www.healingsauna.com/black-sauna#setup" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
+            <a href="https://www.healingsauna.com/setup" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
               Setup
             </a>
             <a href="#testimonials" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
@@ -84,10 +84,10 @@ const Header = () => {
               <a href="https://store.healingsauna.com" className="text-white/70 hover:text-white transition-colors">
                 The Sauna
               </a>
-              <a href="https://www.healingsauna.com/black-sauna#research" className="text-white/70 hover:text-white transition-colors">
+              <a href="https://www.healingsauna.com/research" className="text-white/70 hover:text-white transition-colors">
                 Research
               </a>
-              <a href="https://www.healingsauna.com/black-sauna#setup" className="text-white/70 hover:text-white transition-colors">
+              <a href="https://www.healingsauna.com/setup" className="text-white/70 hover:text-white transition-colors">
                 Setup
               </a>
               <a href="#testimonials" className="text-white/70 hover:text-white transition-colors">
