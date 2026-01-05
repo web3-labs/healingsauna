@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 const features = [
   "Far-infrared wavelength (5.6-15 microns)",
   "360° full-body heat coverage",
-  "Low EMF certified panels",
+  "Low EMF",
   "Patented semiconductor technology",
   "Dual heating zones",
   "Heats up within 2 minutes"
