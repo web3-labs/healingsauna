@@ -182,5 +182,30 @@
             data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
             data-widget-id="687d8b30fe05eecece8ffd04">
     </script>
+    <script>
+    // Reposition GHL chat widget above sticky buy button
+    (function() {
+      function repositionChatWidget() {
+        const selectors = [
+          '[class*="lc-"][style*="position: fixed"]',
+          '[id*="chat"][style*="position: fixed"]',
+          'iframe[src*="leadconnector"]',
+          '[class*="chat-widget"]'
+        ];
+        selectors.forEach(selector => {
+          document.querySelectorAll(selector).forEach(el => {
+            if (el.style && el.style.bottom !== undefined) {
+              el.style.setProperty('bottom', '80px', 'important');
+            }
+          });
+        });
+      }
+      // Run periodically to catch widget after it loads
+      setInterval(repositionChatWidget, 1000);
+      // Also observe DOM changes
+      const observer = new MutationObserver(repositionChatWidget);
+      observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+    })();
+    </script>
   </body>
 </html>
