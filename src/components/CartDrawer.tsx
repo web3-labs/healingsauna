@@ -4,7 +4,7 @@ import { X, Minus, Plus, Tag } from "lucide-react";
 import { useEffect } from "react";
 
 // Shopify configuration
-const SHOPIFY_DOMAIN = "healing-sauna.myshopify.com";
+const SHOPIFY_DOMAIN = "store.healingsauna.com";
 const VARIANT_ID = "44599449387101";
 
 const CartDrawer = () => {
