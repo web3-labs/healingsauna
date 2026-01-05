@@ -8,6 +8,7 @@ import VideoSection from "@/components/VideoSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BenefitsStrip from "@/components/BenefitsStrip";
 import FAQSection from "@/components/FAQSection";
+import ProductDetailsSection from "@/components/ProductDetailsSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import ShopifyBuyButton from "@/components/ShopifyBuyButton";
@@ -26,6 +27,7 @@ const Index = () => {
         <ValueSection />
         <VideoSection />
         <TestimonialsSection />
+        <ProductDetailsSection />
         <FAQSection />
         <FinalCTA />
       </main>
