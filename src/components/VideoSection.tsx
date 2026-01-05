@@ -1,6 +1,6 @@
 import { Play } from "lucide-react";
 import { useState } from "react";
-import chipImage from "@/assets/chip.png";
+import videoThumbnail from "@/assets/video-thumbnail.jpg";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -23,8 +23,8 @@ const VideoSection = () => {
             {!isPlaying ? (
               <>
                 <img
-                  src={chipImage}
-                  alt="Healing Sauna technology chip"
+                  src={videoThumbnail}
+                  alt="Healing Sauna video thumbnail"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -51,9 +51,9 @@ const VideoSection = () => {
             ) : (
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/eGMu3vGQjs4?autoplay=1&rel=0"
+                src="https://www.youtube.com/embed/RMUJIlq_ZoE?autoplay=1&rel=0"
                 title="Healing Sauna Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             )}
