@@ -1,80 +1,44 @@
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { 
-  Check, 
-  Shield, 
-  Truck, 
-  Clock, 
-  Star, 
-  ChevronLeft, 
-  ChevronRight,
-  Headphones,
-  MapPin,
-  Wrench,
-  Calendar
-} from "lucide-react";
+import { Check, Shield, Truck, Clock, Star, ChevronLeft, ChevronRight, Headphones, MapPin, Wrench, Calendar } from "lucide-react";
 import { useState } from "react";
-
 import saunaGymLifestyle from "@/assets/sauna-gym-lifestyle.png";
 import saunaCarryBag from "@/assets/sauna-carry-bag.webp";
 import saunaPackageContents from "@/assets/sauna-package-contents.webp";
 import saunaWomanUsing from "@/assets/sauna-woman-using.webp";
 import saunaRoomSetup from "@/assets/sauna-room-setup.webp";
-
 const ProductPageLayout = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [protectionPlan, setProtectionPlan] = useState(false);
-  
   const images = [saunaGymLifestyle, saunaWomanUsing, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
   const nextImage = () => setSelectedImage(prev => (prev + 1) % images.length);
   const prevImage = () => setSelectedImage(prev => (prev - 1 + images.length) % images.length);
-
   const basePrice = 2300;
   const protectionPrice = 199;
   const totalPrice = protectionPlan ? basePrice + protectionPrice : basePrice;
-
-  return (
-    <section id="hero" className="section-light pt-16 md:pt-24 pb-8 md:pb-16">
+  return <section id="hero" className="section-light pt-16 md:pt-24 pb-8 md:pb-16">
       <div className="container-section">
         {/* Mobile Layout - Image First */}
         <div className="lg:hidden">
           {/* Product Image with Navigation */}
           <div className="relative -mx-4 sm:-mx-6 mb-4">
             <div className="relative overflow-hidden bg-muted">
-              <img 
-                src={images[selectedImage]} 
-                alt="Healing Sauna GO - Black" 
-                className="w-full h-auto object-cover aspect-square" 
-              />
+              <img src={images[selectedImage]} alt="Healing Sauna GO - Black" className="w-full h-auto object-cover aspect-square" />
               
               {/* Navigation Arrows */}
-              <button 
-                onClick={prevImage} 
-                className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/30 transition-colors"
-              >
+              <button onClick={prevImage} className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/30 transition-colors">
                 <ChevronLeft size={24} />
               </button>
-              <button 
-                onClick={nextImage} 
-                className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/30 transition-colors"
-              >
+              <button onClick={nextImage} className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/30 transition-colors">
                 <ChevronRight size={24} />
               </button>
             </div>
 
             {/* Thumbnail Gallery - Horizontal Scroll */}
             <div className="flex gap-2 mt-3 px-4 overflow-x-auto pb-2 scrollbar-hide">
-              {images.map((img, index) => (
-                <button 
-                  key={index} 
-                  onClick={() => setSelectedImage(index)} 
-                  className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                    selectedImage === index ? "border-primary" : "border-border"
-                  }`}
-                >
+              {images.map((img, index) => <button key={index} onClick={() => setSelectedImage(index)} className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${selectedImage === index ? "border-primary" : "border-border"}`}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
-                </button>
-              ))}
+                </button>)}
             </div>
           </div>
 
@@ -92,9 +56,7 @@ const ProductPageLayout = () => {
 
             <div className="flex items-center gap-2">
               <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />)}
               </div>
               <span className="text-muted-foreground text-sm">4.9 Stars (127 Reviews)</span>
             </div>
@@ -128,29 +90,20 @@ const ProductPageLayout = () => {
             </p>
 
             <ul className="space-y-2">
-              {["Portable & foldable design", "Far-infrared full-body heat therapy", "Heats up in under 10 minutes", "Perfect for home, gym, or travel"].map((feature, index) => (
-                <li key={index} className="flex items-start gap-2 text-foreground text-sm">
+              {["Portable & foldable design", "Far-infrared full-body heat therapy", "Heats up in under 10 minutes", "Perfect for home, gym, or travel"].map((feature, index) => <li key={index} className="flex items-start gap-2 text-foreground text-sm">
                   <span className="text-primary mt-1">•</span>
                   {feature}
-                </li>
-              ))}
+                </li>)}
             </ul>
 
             {/* New Year Sale Banner */}
             <div className="bg-foreground text-background rounded-xl p-4">
               <h3 className="font-bold text-base mb-2">New Year Sale: Enter code CYBER to save $200</h3>
               <ul className="space-y-1.5">
-                {[
-                  "Enter promo code CYBER at checkout",
-                  "Free shipping nationwide",
-                  "50% off 3-year extended warranty",
-                  "0% financing up to 12 months"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm">
+                {["Enter promo code CYBER at checkout", "Free shipping nationwide", "50% off 3-year extended warranty", "0% financing up to 12 months"].map((item, index) => <li key={index} className="flex items-center gap-2 text-sm">
                     <Check size={14} className="text-green-400" />
                     {item}
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
 
@@ -182,11 +135,7 @@ const ProductPageLayout = () => {
               
               <label className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary/50 cursor-pointer transition-colors">
                 <div className="flex items-center gap-3">
-                  <Checkbox 
-                    checked={protectionPlan}
-                    onCheckedChange={(checked) => setProtectionPlan(checked as boolean)}
-                    className="data-[state=checked]:bg-primary data-[state=checked]:border-primary"
-                  />
+                  <Checkbox checked={protectionPlan} onCheckedChange={checked => setProtectionPlan(checked as boolean)} className="data-[state=checked]:bg-primary data-[state=checked]:border-primary" />
                   <span className="font-medium text-foreground text-sm">1-Year Protection Plan</span>
                 </div>
                 <span className="font-bold text-foreground">FREE</span>
@@ -250,42 +199,22 @@ const ProductPageLayout = () => {
             <div className="relative">
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden bg-muted border border-border">
-                <img 
-                  src={images[selectedImage]} 
-                  alt="Healing Sauna GO - Black" 
-                  className="w-full h-auto aspect-square object-cover" 
-                />
+                <img src={images[selectedImage]} alt="Healing Sauna GO - Black" className="w-full h-auto aspect-square object-cover" />
                 
                 {/* Navigation Arrows */}
-                <button 
-                  onClick={prevImage} 
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-white transition-colors shadow-lg"
-                >
+                <button onClick={prevImage} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-white transition-colors shadow-lg">
                   <ChevronLeft size={24} />
                 </button>
-                <button 
-                  onClick={nextImage} 
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-white transition-colors shadow-lg"
-                >
+                <button onClick={nextImage} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-white transition-colors shadow-lg">
                   <ChevronRight size={24} />
                 </button>
               </div>
 
               {/* Thumbnail Gallery */}
               <div className="flex gap-3 mt-4">
-                {images.map((img, index) => (
-                  <button 
-                    key={index} 
-                    onClick={() => setSelectedImage(index)} 
-                    className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
-                      selectedImage === index 
-                        ? "border-primary ring-2 ring-primary/20" 
-                        : "border-border hover:border-primary/50"
-                    }`}
-                  >
+                {images.map((img, index) => <button key={index} onClick={() => setSelectedImage(index)} className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${selectedImage === index ? "border-primary ring-2 ring-primary/20" : "border-border hover:border-primary/50"}`}>
                     <img src={img} alt="" className="w-full h-full object-cover" />
-                  </button>
-                ))}
+                  </button>)}
               </div>
             </div>
           </div>
@@ -306,9 +235,7 @@ const ProductPageLayout = () => {
 
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <span className="text-muted-foreground text-sm underline cursor-pointer">
                   4.9 Stars (127 Reviews)
@@ -348,17 +275,10 @@ const ProductPageLayout = () => {
               </p>
 
               <ul className="space-y-2">
-                {[
-                  "Portable & foldable design",
-                  "Far-infrared full-body heat therapy",
-                  "Heats up in under 10 minutes",
-                  "Perfect for home, gym, or travel"
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2 text-foreground text-sm">
+                {["Portable & foldable design", "Far-infrared full-body heat therapy", "Heats up in under 10 minutes", "Perfect for home, gym, or travel"].map((feature, index) => <li key={index} className="flex items-start gap-2 text-foreground text-sm">
                     <span className="text-primary mt-0.5">•</span>
                     {feature}
-                  </li>
-                ))}
+                  </li>)}
               </ul>
 
               <button className="text-sm text-primary font-medium mt-3 hover:underline">
@@ -368,19 +288,12 @@ const ProductPageLayout = () => {
 
             {/* New Year Sale Banner */}
             <div className="bg-foreground text-background rounded-xl p-5">
-              <h3 className="font-bold text-lg mb-3">New Year Sale: Save up to $1,000!</h3>
+              <h3 className="font-bold text-lg mb-3">New Year Sale: Save $200 off</h3>
               <ul className="space-y-2">
-                {[
-                  "$699 off applied automatically",
-                  "Free shipping nationwide",
-                  "50% off 3-year extended warranty",
-                  "0% financing up to 12 months"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm">
+                {["$699 off applied automatically", "Free shipping nationwide", "50% off 3-year extended warranty", "0% financing up to 12 months"].map((item, index) => <li key={index} className="flex items-center gap-2 text-sm">
                     <Check size={16} className="text-green-400" />
                     {item}
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
 
@@ -412,11 +325,7 @@ const ProductPageLayout = () => {
               
               <label className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary/50 cursor-pointer transition-colors">
                 <div className="flex items-center gap-3">
-                  <Checkbox 
-                    checked={protectionPlan}
-                    onCheckedChange={(checked) => setProtectionPlan(checked as boolean)}
-                    className="data-[state=checked]:bg-primary data-[state=checked]:border-primary"
-                  />
+                  <Checkbox checked={protectionPlan} onCheckedChange={checked => setProtectionPlan(checked as boolean)} className="data-[state=checked]:bg-primary data-[state=checked]:border-primary" />
                   <span className="font-medium text-foreground text-sm">1-Year Protection Plan</span>
                 </div>
                 <span className="font-bold text-foreground">FREE</span>
@@ -473,8 +382,6 @@ const ProductPageLayout = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProductPageLayout;
