@@ -37,15 +37,27 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
-              Features
+          <nav className="hidden md:flex items-center gap-6">
+            <a href="https://store.healingsauna.com" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
+              The Sauna
+            </a>
+            <a href="https://www.healingsauna.com/black-sauna#research" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
+              Research
+            </a>
+            <a href="https://www.healingsauna.com/black-sauna#setup" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
+              Setup
             </a>
             <a href="#testimonials" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
-              Reviews
+              Testimonials
             </a>
             <a href="#faq" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
               FAQ
+            </a>
+            <a href="https://www.healingsauna.com/affiliates" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
+              Affiliates
+            </a>
+            <a href="https://www.healingsauna.com/contact" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
+              Contact
             </a>
           </nav>
 
@@ -69,14 +81,26 @@ const Header = () => {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-white/10">
             <nav className="flex flex-col gap-4">
-              <a href="#features" className="text-white/70 hover:text-white transition-colors">
-                Features
+              <a href="https://store.healingsauna.com" className="text-white/70 hover:text-white transition-colors">
+                The Sauna
+              </a>
+              <a href="https://www.healingsauna.com/black-sauna#research" className="text-white/70 hover:text-white transition-colors">
+                Research
+              </a>
+              <a href="https://www.healingsauna.com/black-sauna#setup" className="text-white/70 hover:text-white transition-colors">
+                Setup
               </a>
               <a href="#testimonials" className="text-white/70 hover:text-white transition-colors">
-                Reviews
+                Testimonials
               </a>
               <a href="#faq" className="text-white/70 hover:text-white transition-colors">
                 FAQ
+              </a>
+              <a href="https://www.healingsauna.com/affiliates" className="text-white/70 hover:text-white transition-colors">
+                Affiliates
+              </a>
+              <a href="https://www.healingsauna.com/contact" className="text-white/70 hover:text-white transition-colors">
+                Contact
               </a>
               <Button variant="hero" size="lg" className="mt-2" onClick={handleBuyNow}>
                 Buy Now
