@@ -11,6 +11,7 @@ import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import ShopifyBuyButton from "@/components/ShopifyBuyButton";
+import StickyBuyButton from "@/components/StickyBuyButton";
 
 const Index = () => {
   return (
@@ -29,6 +30,7 @@ const Index = () => {
         <FinalCTA />
       </main>
       <Footer />
+      <StickyBuyButton />
       <ShopifyBuyButton />
     </div>
   );

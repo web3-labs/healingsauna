@@ -194,7 +194,7 @@ const ProductPageLayout = () => {
             </div>
 
             {/* Add to Cart Button - Shopify Buy Button (Mobile) */}
-            <div id="mobile-add-to-cart" className="lg:hidden w-full min-h-[56px]" />
+            <div id="mobile-add-to-cart" className="w-full min-h-[56px]" />
 
             {/* Shipping & Trust Features */}
             <div className="bg-card rounded-xl p-4 border border-border">
@@ -424,7 +424,7 @@ const ProductPageLayout = () => {
             </div>
 
             {/* Add to Cart Button - Shopify Buy Button (Desktop) */}
-            <div id="desktop-add-to-cart" className="hidden lg:block w-full min-h-[56px]" />
+            <div id="desktop-add-to-cart" className="w-full min-h-[56px]" />
 
             {/* Shipping & Trust Features */}
             <div className="bg-card rounded-xl p-5 border border-border">

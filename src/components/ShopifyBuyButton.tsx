@@ -36,10 +36,11 @@ const ShopifyBuyButton = () => {
           styles: {
             product: {
               "@media (min-width: 601px)": {
-                "max-width": "calc(25% - 20px)",
-                "margin-left": "20px",
-                "margin-bottom": "50px",
+                "max-width": "100%",
+                "margin-left": "0",
+                "margin-bottom": "0",
               },
+              "text-align": "left",
             },
             button: {
               "font-size": "18px",
@@ -49,6 +50,7 @@ const ShopifyBuyButton = () => {
               "background-color": "#000000",
               ":focus": { "background-color": "#000000" },
               "border-radius": "40px",
+              "width": "100%",
             },
             quantityInput: {
               "font-size": "18px",
@@ -188,8 +190,6 @@ const ShopifyBuyButton = () => {
           const buttonIds = [
             "mobile-add-to-cart",
             "desktop-add-to-cart",
-            "mobile-hero-shopify-button",
-            "desktop-hero-shopify-button",
             "final-cta-shopify-button",
             "sticky-shopify-button",
           ];
