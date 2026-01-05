@@ -10,7 +10,6 @@ import BenefitsStrip from "@/components/BenefitsStrip";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
-import StickyBuyButton from "@/components/StickyBuyButton";
 
 const Index = () => {
   return (
@@ -29,7 +28,6 @@ const Index = () => {
         <FinalCTA />
       </main>
       <Footer />
-      <StickyBuyButton />
     </div>
   );
 };
