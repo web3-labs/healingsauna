@@ -123,9 +123,11 @@ const ProductPageLayout = () => {
                   <Headphones size={16} className="text-white" />
                 </div>
               </div>
-              <Button variant="outline" className="w-full mt-3 h-10 text-sm font-medium">
-                <Calendar size={14} className="mr-2" />
-                Schedule a Call
+              <Button variant="outline" className="w-full mt-3 h-10 text-sm font-medium" asChild>
+                <a href="tel:808-300-6608">
+                  <Calendar size={14} className="mr-2" />
+                  Schedule a Call
+                </a>
               </Button>
             </div>
 
