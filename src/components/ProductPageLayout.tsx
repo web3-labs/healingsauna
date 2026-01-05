@@ -16,12 +16,16 @@ import {
 import { useState } from "react";
 import saunaProduct from "@/assets/sauna-product-black.png";
 import saunaGymLifestyle from "@/assets/sauna-gym-lifestyle.png";
+import saunaCarryBag from "@/assets/sauna-carry-bag.webp";
+import saunaPackageContents from "@/assets/sauna-package-contents.webp";
+import saunaWomanUsing from "@/assets/sauna-woman-using.webp";
+import saunaRoomSetup from "@/assets/sauna-room-setup.webp";
 
 const ProductPageLayout = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [protectionPlan, setProtectionPlan] = useState(false);
   
-  const images = [saunaGymLifestyle, saunaProduct];
+  const images = [saunaGymLifestyle, saunaProduct, saunaWomanUsing, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
   const nextImage = () => setSelectedImage(prev => (prev + 1) % images.length);
   const prevImage = () => setSelectedImage(prev => (prev - 1 + images.length) % images.length);
 
