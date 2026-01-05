@@ -18,6 +18,10 @@ import saunaProduct from "@/assets/sauna-product-black.png";
 import saunaGymLifestyle from "@/assets/sauna-gym-lifestyle.png";
 import { useCart } from "@/contexts/CartContext";
 
+// Shopify configuration
+const SHOPIFY_DOMAIN = "healing-sauna.myshopify.com";
+const VARIANT_ID = "44599449387101";
+
 const ProductPageLayout = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [protectionPlan, setProtectionPlan] = useState(false);
@@ -38,6 +42,14 @@ const ProductPageLayout = () => {
       price: totalPrice,
       image: saunaProduct,
     });
+  };
+
+  const handleBuyNow = () => {
+    // Direct to Shopify checkout
+    window.open(
+      `https://${SHOPIFY_DOMAIN}/cart/${VARIANT_ID}:1`,
+      "_blank"
+    );
   };
 
   return (
