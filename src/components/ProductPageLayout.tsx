@@ -138,7 +138,7 @@ const ProductPageLayout = () => {
 
             {/* New Year Sale Banner */}
             <div className="bg-foreground text-background rounded-xl p-4">
-              <h3 className="font-bold text-base mb-2">New Year Sale: Save up to $1,000!</h3>
+              <h3 className="font-bold text-base mb-2">New Year Sale: Enter code CYBER to save $200</h3>
               <ul className="space-y-1.5">
                 {[
                   "$699 off applied automatically",
