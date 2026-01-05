@@ -1,6 +1,6 @@
 import { Play } from "lucide-react";
 import { useState } from "react";
-import heroLifestyle from "@/assets/hero-lifestyle.png";
+import chipImage from "@/assets/chip.png";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -23,8 +23,8 @@ const VideoSection = () => {
             {!isPlaying ? (
               <>
                 <img
-                  src={heroLifestyle}
-                  alt="Video thumbnail"
+                  src={chipImage}
+                  alt="Healing Sauna technology chip"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
