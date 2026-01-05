@@ -57,7 +57,7 @@ const PurchaseSection = () => {
                   onCheckedChange={(checked) => setProtectionPlan(checked as boolean)}
                   className="data-[state=checked]:bg-primary data-[state=checked]:border-primary"
                 />
-                <span className="font-medium text-foreground">3-Year Protection Plan</span>
+                <span className="font-medium text-foreground">1-Year Protection Plan</span>
               </div>
               <span className="font-bold text-foreground">FREE</span>
             </label>
