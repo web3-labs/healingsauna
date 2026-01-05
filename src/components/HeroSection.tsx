@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Check, Shield, Truck, Clock } from "lucide-react";
 import saunaProduct from "@/assets/sauna-product-black.png";
-import heroLifestyle from "@/assets/hero-lifestyle.png";
+import saunaGymLifestyle from "@/assets/sauna-gym-lifestyle.png";
 import { useState } from "react";
 
 const HeroSection = () => {
   const [selectedImage, setSelectedImage] = useState(0);
-  const images = [saunaProduct, heroLifestyle];
+  const images = [saunaGymLifestyle, saunaProduct];
 
   return (
     <section id="hero" className="section-dark pt-24 md:pt-32 pb-16 md:pb-24">
@@ -81,11 +81,11 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="relative">
               {/* Main Image */}
-              <div className="relative rounded-2xl overflow-hidden bg-black p-8 glow-effect">
+              <div className="relative rounded-2xl overflow-hidden glow-effect">
                 <img
                   src={images[selectedImage]}
                   alt="Healing Sauna GO - Black"
-                  className="w-full h-auto rounded-xl object-contain"
+                  className="w-full h-auto rounded-xl object-cover"
                 />
               </div>
 
