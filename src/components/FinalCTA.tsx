@@ -1,52 +1,42 @@
-import { Truck, Shield, Clock } from "lucide-react";
-
 const FinalCTA = () => {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-blue to-brand-cyan" />
-      <div className="absolute inset-0 bg-white/5 opacity-30" />
-      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.1)_0%,_transparent_50%)]" />
-      
-      <div className="container-section relative z-10">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Join the Healing Sauna Lifestyle
-          </h2>
+    <section className="bg-black py-12 md:py-16">
+      <div className="container-section">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div className="flex flex-col items-center text-center">
+            <img 
+              src="https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/671e421c72d463d63b638735_Calories%20Burn.svg" 
+              alt="Calories Burn Icon" 
+              className="w-12 h-12 mb-4"
+            />
+            <h3 className="text-white text-sm md:text-base font-medium lowercase">Calorie Burn</h3>
+          </div>
           
-          <p className="text-white/80 text-lg mb-8">
-            Transform your recovery routine. Experience the benefits of premium far-infrared therapy 
-            in the comfort of your own home.
-          </p>
-
-          {/* Price reminder */}
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
-            <span className="text-white/60 line-through">$2,999</span>
-            <span className="text-2xl font-bold text-white">$2,300</span>
-            <span className="bg-white text-primary text-sm font-bold px-3 py-1 rounded-full">
-              Save $699
-            </span>
+          <div className="flex flex-col items-center text-center">
+            <img 
+              src="https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/671e42332dcf5c41c8e2e5f4_Pain%20Relief.svg" 
+              alt="Pain Relief Icon" 
+              className="w-12 h-12 mb-4"
+            />
+            <h3 className="text-white text-sm md:text-base font-medium lowercase">Alleviate Pain</h3>
           </div>
-
-          {/* CTA Button - Shopify Buy Button */}
-          <div className="mb-8">
-            <div id="final-cta-shopify-button" className="inline-block min-h-[56px]" />
+          
+          <div className="flex flex-col items-center text-center">
+            <img 
+              src="https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/671e3f98cc3a4061e6aee2b4_Sleeping.svg" 
+              alt="Sleeping Icon" 
+              className="w-12 h-12 mb-4"
+            />
+            <h3 className="text-white text-sm md:text-base font-medium lowercase">Sleep Optimization</h3>
           </div>
-
-          {/* Trust badges */}
-          <div className="flex flex-wrap justify-center gap-6 text-white/80 text-sm">
-            <div className="flex items-center gap-2">
-              <Truck size={18} />
-              <span>Free Shipping</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Shield size={18} />
-              <span>30-Day Guarantee</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock size={18} />
-              <span>Ships in 2-3 Days</span>
-            </div>
+          
+          <div className="flex flex-col items-center text-center">
+            <img 
+              src="https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/671e3f713a2a930512af22ea_boosting-potential.svg" 
+              alt="Boosting Potential Icon" 
+              className="w-12 h-12 mb-4"
+            />
+            <h3 className="text-white text-sm md:text-base font-medium lowercase">Boost Recovery</h3>
           </div>
         </div>
       </div>
