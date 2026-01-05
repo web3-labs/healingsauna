@@ -3,8 +3,23 @@ import { Button } from "@/components/ui/button";
 import { X, Minus, Plus, Tag } from "lucide-react";
 import { useEffect } from "react";
 
+// Shopify configuration
+const SHOPIFY_DOMAIN = "healing-sauna.myshopify.com";
+const VARIANT_ID = "44599449387101";
+
 const CartDrawer = () => {
   const { items, isOpen, closeCart, updateQuantity, discount, subtotal, total } = useCart();
+
+  const handleCheckout = () => {
+    // Build Shopify cart URL with quantities
+    const totalQuantity = items.reduce((acc, item) => acc + item.quantity, 0);
+    if (totalQuantity > 0) {
+      window.open(
+        `https://${SHOPIFY_DOMAIN}/cart/${VARIANT_ID}:${totalQuantity}`,
+        "_blank"
+      );
+    }
+  };
 
   // Prevent body scroll when drawer is open
   useEffect(() => {
@@ -140,7 +155,10 @@ const CartDrawer = () => {
             </p>
 
             {/* Checkout Button */}
-            <Button className="w-full h-12 text-base font-semibold bg-gradient-to-r from-brand-blue to-brand-cyan hover:opacity-90">
+            <Button 
+              className="w-full h-12 text-base font-semibold bg-gradient-to-r from-brand-blue to-brand-cyan hover:opacity-90"
+              onClick={handleCheckout}
+            >
               Checkout
             </Button>
           </div>
