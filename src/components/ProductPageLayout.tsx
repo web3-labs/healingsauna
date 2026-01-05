@@ -251,6 +251,9 @@ const ProductPageLayout = () => {
                 </span>
               </div>
 
+              {/* Add to Cart Button - Shopify Buy Button (Desktop) */}
+              <div id="desktop-add-to-cart" className="w-full min-h-[56px]" />
+
               {/* Financing Option */}
               <div className="flex items-center justify-between p-3 bg-muted rounded-xl border border-border cursor-pointer hover:border-primary/50 transition-colors">
                 <div className="flex items-center gap-3">
@@ -336,8 +339,6 @@ const ProductPageLayout = () => {
               </p>
             </div>
 
-            {/* Add to Cart Button - Shopify Buy Button (Desktop) */}
-            <div id="desktop-add-to-cart" className="w-full min-h-[56px]" />
 
             {/* Shipping & Trust Features */}
             <div className="bg-card rounded-xl p-5 border border-border">
