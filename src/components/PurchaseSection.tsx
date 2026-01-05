@@ -116,7 +116,7 @@ const PurchaseSection = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-start gap-3">
                 <Shield size={18} className="text-muted-foreground mt-0.5" />
-                <span className="text-sm text-foreground">2-Year Warranty</span>
+                <span className="text-sm text-foreground">1 Year Warranty</span>
               </div>
               <div className="flex items-start gap-3">
                 <Headphones size={18} className="text-muted-foreground mt-0.5" />
