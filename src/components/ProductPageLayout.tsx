@@ -290,7 +290,7 @@ const ProductPageLayout = () => {
             <div className="bg-foreground text-background rounded-xl p-5">
               <h3 className="font-bold text-lg mb-3">New Year Sale: Save $200 off</h3>
               <ul className="space-y-2">
-                {["Enter code \"CYBER\" at checkout", "Free shipping nationwide", "50% off 3-year extended warranty", "0% financing up to 12 months"].map((item, index) => <li key={index} className="flex items-center gap-2 text-sm">
+                {["Enter code \"CYBER\" at checkout", "Free shipping nationwide", "Free 1 Year Warranty", "0% financing up to 12 months"].map((item, index) => <li key={index} className="flex items-center gap-2 text-sm">
                     <Check size={16} className="text-green-400" />
                     {item}
                   </li>)}
