@@ -22,12 +22,12 @@ const Index = () => {
       <main>
         <ProductPageLayout />
         <TrustBar />
+        <VideoSection />
         <BenefitsStrip />
         <FeaturesSlider />
         <DifferenceSection />
         <WhatMakesDifferentSection />
         <ValueSection />
-        <VideoSection />
         <TestimonialsSection />
         <ProductDetailsSection />
         <FAQSection />
