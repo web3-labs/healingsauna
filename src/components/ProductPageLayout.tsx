@@ -173,7 +173,7 @@ const ProductPageLayout = () => {
             <div className="bg-card rounded-xl p-4 border border-border">
               <div className="flex items-center gap-2 mb-2">
                 <Shield className="text-primary" size={18} />
-                <h3 className="text-sm font-bold text-foreground">Add Protection Plan</h3>
+                <h3 className="text-sm font-bold text-foreground">1 Year</h3>
               </div>
               
               <label className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary/50 cursor-pointer transition-colors">
