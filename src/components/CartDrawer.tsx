@@ -4,19 +4,19 @@ import { X, Minus, Plus, Tag } from "lucide-react";
 import { useEffect } from "react";
 
 // Shopify configuration
-const SHOPIFY_STORE_ID = "68005494877";
+const SHOPIFY_DOMAIN = "healingsauna.myshopify.com";
 const VARIANT_ID = "44599449387101";
 
 const CartDrawer = () => {
   const { items, isOpen, closeCart, updateQuantity, discount, subtotal, total } = useCart();
 
   const handleCheckout = () => {
-    // Build Shopify checkout URL with quantities
+    // Send the user into Shopify's hosted checkout (stays on *.myshopify.com)
     const totalQuantity = items.reduce((acc, item) => acc + item.quantity, 0);
+
     if (totalQuantity > 0) {
-      // Use the direct Shopify checkout URL format that redirects to shop.app
       window.open(
-        `https://checkout.shopify.com/${SHOPIFY_STORE_ID}/checkouts/cn?line_items[0][variant_id]=${VARIANT_ID}&line_items[0][quantity]=${totalQuantity}&channel=buy_button`,
+        `https://${SHOPIFY_DOMAIN}/cart/${VARIANT_ID}:${totalQuantity}?checkout&channel=buy_button&skip_shop_pay=true&shop_pay_checkout_as_guest=true`,
         "_blank"
       );
     }

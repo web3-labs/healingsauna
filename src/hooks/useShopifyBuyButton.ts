@@ -9,7 +9,7 @@ declare global {
 }
 
 // Healing Sauna Shopify configuration
-const SHOPIFY_DOMAIN = "healing-sauna.myshopify.com";
+const SHOPIFY_DOMAIN = "healingsauna.myshopify.com";
 const STOREFRONT_ACCESS_TOKEN = "8b5c81c9a8bff36a2c6b0e9a2b8c5f3e"; // Public storefront token
 const PRODUCT_ID = "gid://shopify/Product/7918751318109";
 
@@ -105,9 +105,9 @@ export const useShopifyBuyButton = () => {
   }, []);
 
   const openCheckout = useCallback(() => {
-    // Direct checkout URL for Healing Sauna
+    // Go straight to Shopify-hosted checkout (no shop.app universal redirect)
     window.open(
-      `https://${SHOPIFY_DOMAIN}/cart/44599449387101:1`,
+      `https://${SHOPIFY_DOMAIN}/cart/44599449387101:1?checkout&channel=buy_button&skip_shop_pay=true&shop_pay_checkout_as_guest=true`,
       "_blank"
     );
   }, []);
