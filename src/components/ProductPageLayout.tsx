@@ -16,10 +16,12 @@ import {
 import { useState } from "react";
 import saunaProduct from "@/assets/sauna-product-black.png";
 import saunaGymLifestyle from "@/assets/sauna-gym-lifestyle.png";
+import { useCart } from "@/contexts/CartContext";
 
 const ProductPageLayout = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [protectionPlan, setProtectionPlan] = useState(false);
+  const { addItem } = useCart();
   
   const images = [saunaGymLifestyle, saunaProduct];
   const nextImage = () => setSelectedImage(prev => (prev + 1) % images.length);
@@ -28,6 +30,15 @@ const ProductPageLayout = () => {
   const basePrice = 2300;
   const protectionPrice = 199;
   const totalPrice = protectionPlan ? basePrice + protectionPrice : basePrice;
+
+  const handleAddToCart = () => {
+    addItem({
+      id: "healing-sauna-go-black",
+      name: "GO by Healing Sauna – The Ultimate Infrared Experience",
+      price: totalPrice,
+      image: saunaProduct,
+    });
+  };
 
   return (
     <section id="hero" className="section-light pt-16 md:pt-24 pb-8 md:pb-16">
@@ -318,7 +329,7 @@ const ProductPageLayout = () => {
             </div>
 
             {/* Add to Cart Button */}
-            <Button variant="hero" size="xl" className="w-full text-lg h-14">
+            <Button variant="hero" size="xl" className="w-full text-lg h-14" onClick={handleAddToCart}>
               Add To Cart
             </Button>
 
