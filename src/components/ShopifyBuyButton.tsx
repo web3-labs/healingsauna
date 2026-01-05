@@ -25,11 +25,6 @@ const ShopifyBuyButton = () => {
       });
 
       window.shopifyClient = client;
-
-      const dispatchShopifyAction = () => {
-        window.dispatchEvent(new CustomEvent("shopify-action"));
-      };
-
       // Direct to checkout options (Buy now)
       const buyNowOptions = {
         product: {
@@ -174,6 +169,7 @@ const ShopifyBuyButton = () => {
           if (node.dataset.shopifyMounted === "true") return;
 
           node.dataset.shopifyMounted = "true";
+          console.debug("[ShopifyBuyButton] mounting", nodeId);
 
           // Add a sentinel child immediately so any legacy logic (e.g., hasChildNodes checks)
           // doesn't try to mount again before Shopify finishes injecting its iframe.
@@ -190,6 +186,7 @@ const ShopifyBuyButton = () => {
           const buttonIds = [
             "mobile-add-to-cart",
             "desktop-add-to-cart",
+            "value-shopify-button",
             "final-cta-shopify-button",
             "sticky-shopify-button",
           ];
