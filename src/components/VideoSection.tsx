@@ -49,9 +49,13 @@ const VideoSection = () => {
                 </div>
               </>
             ) : (
-              <div className="w-full h-full bg-brand-charcoal flex items-center justify-center">
-                <p className="text-white/60">Video would play here</p>
-              </div>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/eGMu3vGQjs4?autoplay=1&rel=0"
+                title="Healing Sauna Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             )}
           </div>
         </div>
