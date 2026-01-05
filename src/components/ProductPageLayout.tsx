@@ -89,7 +89,7 @@ const ProductPageLayout = () => {
           <div className="space-y-4">
             <div className="flex items-start justify-between gap-4">
               <h1 className="text-2xl font-bold text-foreground leading-tight">
-                Healing Sauna GO — Black
+                The Healing Sauna
               </h1>
               <span className="flex-shrink-0 inline-flex items-center gap-1 text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full">
                 <Check size={12} />
@@ -107,15 +107,31 @@ const ProductPageLayout = () => {
             </div>
 
             <div className="flex items-center gap-3 flex-wrap">
-              <span className="text-2xl font-bold text-foreground">$2,300 USD</span>
+              <span className="text-2xl font-bold text-foreground">${totalPrice.toLocaleString()} USD</span>
               <span className="text-muted-foreground line-through text-sm">$2,999</span>
               <span className="text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-cyan px-2 py-1 rounded">
                 $699 off
               </span>
             </div>
 
+            {/* Financing Option */}
+            <div className="flex items-center justify-between p-3 bg-muted rounded-xl border border-border cursor-pointer hover:border-primary/50 transition-colors">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-6 rounded bg-background flex items-center justify-center border border-border">
+                  <span className="text-[10px] font-bold text-primary">0%</span>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">0% interest for 12 months</p>
+                  <p className="text-xs text-muted-foreground">
+                    As low as <span className="font-semibold">${Math.round(totalPrice / 12)}/mo*</span>
+                  </p>
+                </div>
+              </div>
+              <ChevronRight size={18} className="text-muted-foreground" />
+            </div>
+
             <p className="text-muted-foreground text-sm">
-              Rejuvenate, detox, and recover anywhere with the ultimate home sauna.
+              Rejuvenate, detox, and recover anywhere with a premium far-infrared sauna designed for your lifestyle.
             </p>
 
             <ul className="space-y-2">
@@ -127,19 +143,111 @@ const ProductPageLayout = () => {
               ))}
             </ul>
 
-            <Button variant="hero" size="xl" className="w-full">
-              Buy Now — $2,300
+            {/* New Year Sale Banner */}
+            <div className="bg-foreground text-background rounded-xl p-4">
+              <h3 className="font-bold text-base mb-2">New Year Sale: Save up to $1,000!</h3>
+              <ul className="space-y-1.5">
+                {[
+                  "$699 off applied automatically",
+                  "Free shipping nationwide",
+                  "50% off 3-year extended warranty",
+                  "0% financing up to 12 months"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-2 text-sm">
+                    <Check size={14} className="text-green-400" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Exclusive Offer Card */}
+            <div className="bg-card rounded-xl p-4 border border-border">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-sm font-bold text-foreground mb-1">Exclusive Offer</h3>
+                  <p className="text-muted-foreground text-xs">
+                    Talk to our wellness specialist to unlock an exclusive discount.
+                  </p>
+                </div>
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center flex-shrink-0">
+                  <Headphones size={16} className="text-white" />
+                </div>
+              </div>
+              <Button variant="outline" className="w-full mt-3 h-10 text-sm font-medium">
+                <Calendar size={14} className="mr-2" />
+                Schedule a Call
+              </Button>
+            </div>
+
+            {/* Protection Plan */}
+            <div className="bg-card rounded-xl p-4 border border-border">
+              <div className="flex items-center gap-2 mb-2">
+                <Shield className="text-primary" size={18} />
+                <h3 className="text-sm font-bold text-foreground">Add Protection Plan</h3>
+              </div>
+              
+              <label className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary/50 cursor-pointer transition-colors">
+                <div className="flex items-center gap-3">
+                  <Checkbox 
+                    checked={protectionPlan}
+                    onCheckedChange={(checked) => setProtectionPlan(checked as boolean)}
+                    className="data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                  />
+                  <span className="font-medium text-foreground text-sm">3-Year Protection Plan</span>
+                </div>
+                <span className="font-bold text-foreground">${protectionPrice}</span>
+              </label>
+              
+              <p className="text-muted-foreground text-xs mt-2">
+                What's Covered? <span className="text-primary underline cursor-pointer">Learn more</span>
+              </p>
+            </div>
+
+            {/* Add to Cart Button */}
+            <Button variant="hero" size="xl" className="w-full" onClick={handleAddToCart}>
+              Add To Cart — ${totalPrice.toLocaleString()}
             </Button>
 
-            <div className="flex justify-center gap-6 text-muted-foreground text-xs pt-2">
-              <div className="flex items-center gap-1">
-                <Truck size={14} className="text-primary" />
-                <span>Free Shipping</span>
+            {/* Shipping & Trust Features */}
+            <div className="bg-card rounded-xl p-4 border border-border">
+              {/* Ships By */}
+              <div className="flex items-center gap-3 mb-4 pb-4 border-b border-border">
+                <Truck className="text-foreground" size={16} />
+                <span className="font-semibold text-foreground text-sm">Ships by Jan 12th</span>
+                <span className="inline-flex items-center gap-1 text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full ml-auto">
+                  <Check size={12} />
+                  In Stock
+                </span>
               </div>
-              <div className="flex items-center gap-1">
-                <Shield size={14} className="text-primary" />
-                <span>30-Day Guarantee</span>
+
+              {/* Trust Features Grid */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex items-start gap-2">
+                  <Shield size={14} className="text-muted-foreground mt-0.5" />
+                  <span className="text-xs text-foreground">2-Year Warranty</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Headphones size={14} className="text-muted-foreground mt-0.5" />
+                  <span className="text-xs text-foreground">100% U.S.-Based Support</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <MapPin size={14} className="text-muted-foreground mt-0.5" />
+                  <span className="text-xs text-foreground">Ships Worldwide</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Wrench size={14} className="text-muted-foreground mt-0.5" />
+                  <span className="text-xs text-foreground">Nationwide Repairs</span>
+                </div>
               </div>
+            </div>
+
+            {/* HSA/FSA Banner */}
+            <div className="flex items-center justify-center gap-2 py-2 text-xs flex-wrap">
+              <span className="font-semibold text-foreground">HSA/FSA eligible</span>
+              <span className="text-primary">✦</span>
+              <span className="text-muted-foreground">Save an average of 30%</span>
+              <span className="text-primary underline cursor-pointer font-medium">Learn more</span>
             </div>
           </div>
         </div>
