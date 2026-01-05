@@ -153,7 +153,7 @@ const ProductPageLayout = () => {
               <div className="grid grid-cols-2 gap-3">
                 <div className="flex items-start gap-2">
                   <Shield size={14} className="text-muted-foreground mt-0.5" />
-                  <span className="text-xs text-foreground">2-Year Warranty</span>
+                  <span className="text-xs text-foreground">1 Year Warranty</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Headphones size={14} className="text-muted-foreground mt-0.5" />
@@ -329,7 +329,7 @@ const ProductPageLayout = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-start gap-2">
                   <Shield size={16} className="text-muted-foreground mt-0.5" />
-                  <span className="text-xs text-foreground">2-Year Warranty</span>
+                  <span className="text-xs text-foreground">1 Year Warranty</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Headphones size={16} className="text-muted-foreground mt-0.5" />
