@@ -145,31 +145,20 @@
   }
 }
 
-/* GoHighLevel Chat Widget - position above sticky buy button */
-#lc_chat_widget,
-.lc_chat_widget,
-[class*="chat-widget"],
-[id*="chat-widget"],
-[class*="lc-chat"],
-[id*="lc-chat"],
-iframe[src*="leadconnectorhq"],
-div[style*="fixed"][style*="bottom: 0"] > div,
-.chat-widget-container,
-#chat-widget-container {
-  bottom: 80px !important;
+/* GoHighLevel Chat Widget - keep above the sticky Buy Now bar */
+:root {
+  --ghl-chat-bottom-offset: 88px;
 }
 
 @media (max-width: 640px) {
-  #lc_chat_widget,
-  .lc_chat_widget,
-  [class*="chat-widget"],
-  [id*="chat-widget"],
-  [class*="lc-chat"],
-  [id*="lc-chat"],
-  iframe[src*="leadconnectorhq"],
-  div[style*="fixed"][style*="bottom: 0"] > div,
-  .chat-widget-container,
-  #chat-widget-container {
-    bottom: 70px !important;
+  :root {
+    --ghl-chat-bottom-offset: 96px;
   }
+}
+
+chat-widget,
+iframe[src*="leadconnector"],
+iframe[src*="leadconnectorhq"] {
+  bottom: var(--ghl-chat-bottom-offset) !important;
+  right: 16px !important;
 }
