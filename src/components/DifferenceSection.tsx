@@ -4,7 +4,7 @@ const features = [
   "Far-infrared wavelength (5.6-15 microns)",
   "360° full-body heat coverage",
   "Low EMF certified panels",
-  "Medical-grade materials",
+  "Patented semiconductor technology",
   "Dual heating zones",
   "Digital temperature control"
 ];
