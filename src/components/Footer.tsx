@@ -25,15 +25,15 @@ const Footer = () => {
             <ul className="space-y-3 text-white/60 text-sm">
               <li><a href="https://www.healingsauna.com/#benefits" className="hover:text-white transition-colors">Benefits</a></li>
               <li><a href="https://www.healingsauna.com/#the-sauna" className="hover:text-white transition-colors">The Sauna</a></li>
-              <li><a href="/research" className="hover:text-white transition-colors">Research</a></li>
+              <li><a href="https://www.healingsauna.com/research" className="hover:text-white transition-colors">Research</a></li>
             </ul>
           </div>
 
           {/* Column 2 */}
           <div>
             <ul className="space-y-3 text-white/60 text-sm">
-              <li><a href="/faqs" className="hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="https://www.healingsauna.com/faqs" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="https://www.healingsauna.com/contact" className="hover:text-white transition-colors">Contact</a></li>
               <li><a href="https://www.healingsauna.com/start-return" className="hover:text-white transition-colors">Returns</a></li>
             </ul>
           </div>
@@ -41,9 +41,9 @@ const Footer = () => {
           {/* Column 3 */}
           <div>
             <ul className="space-y-3 text-white/60 text-sm">
-              <li><a href="/affiliates" className="hover:text-white transition-colors">Affiliates</a></li>
+              <li><a href="https://www.healingsauna.com/affiliates" className="hover:text-white transition-colors">Affiliates</a></li>
               <li><a href="https://www.fedex.com/en-us/tracking.html" className="hover:text-white transition-colors">Track Package</a></li>
-              <li><a href="/setup" className="hover:text-white transition-colors">Setup Guide</a></li>
+              <li><a href="https://www.healingsauna.com/setup" className="hover:text-white transition-colors">Setup Guide</a></li>
             </ul>
           </div>
         </div>
