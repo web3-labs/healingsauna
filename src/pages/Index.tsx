@@ -20,12 +20,12 @@ const Index = () => {
       <main>
         <ProductPageLayout />
         <TrustBar />
+        <BenefitsStrip />
         <FeaturesSection />
         <DifferenceSection />
         <ValueSection />
         <VideoSection />
         <TestimonialsSection />
-        <BenefitsStrip />
         <FAQSection />
         <FinalCTA />
       </main>
