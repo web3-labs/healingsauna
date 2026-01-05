@@ -1,6 +1,6 @@
 import { Zap, Package, Thermometer, FolderOpen } from "lucide-react";
 import { useState } from "react";
-import saunaLifestyle from "@/assets/sauna-lifestyle.png";
+import saunaLuxuryGym from "@/assets/sauna-luxury-gym.png";
 
 const features = [
   {
@@ -45,7 +45,7 @@ const FeaturesSection = () => {
           {/* Image */}
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src={saunaLifestyle}
+              src={saunaLuxuryGym}
               alt="Healing Sauna in use"
               className="w-full h-auto"
             />
