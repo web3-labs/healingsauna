@@ -186,7 +186,7 @@ const ProductPageLayout = () => {
             <div>
               <div className="flex items-start justify-between gap-4 mb-3">
                 <h1 className="text-3xl font-bold text-foreground leading-tight">
-                  Healing Sauna GO — Black
+                  The Healing Sauna
                 </h1>
                 <span className="flex-shrink-0 inline-flex items-center gap-1 text-xs font-medium text-green-600 bg-green-100 px-2.5 py-1.5 rounded-full">
                   <Check size={12} />
