@@ -6,7 +6,7 @@ const features = [
   "Low EMF certified panels",
   "Patented semiconductor technology",
   "Dual heating zones",
-  "Digital temperature control"
+  "Heats up within 2 minutes"
 ];
 
 const DifferenceSection = () => {
