@@ -151,16 +151,27 @@ const ShopifyBuyButton = () => {
         window.shopifyUI = ui;
 
         const initProductButtons = () => {
-          // Create product buttons for all containers
-          const productContainers = document.querySelectorAll('.shopify-product-button:empty');
-          productContainers.forEach((node) => {
+          // Create for mobile add to cart
+          const mobileBtn = document.getElementById('mobile-add-to-cart');
+          if (mobileBtn && !mobileBtn.hasChildNodes()) {
             ui.createComponent('product', {
               id: '7918751318109',
-              node: node,
+              node: mobileBtn,
               moneyFormat: '%24%7B%7Bamount%7D%7D',
               options: options
             });
-          });
+          }
+
+          // Create for desktop add to cart
+          const desktopBtn = document.getElementById('desktop-add-to-cart');
+          if (desktopBtn && !desktopBtn.hasChildNodes()) {
+            ui.createComponent('product', {
+              id: '7918751318109',
+              node: desktopBtn,
+              moneyFormat: '%24%7B%7Bamount%7D%7D',
+              options: options
+            });
+          }
 
           // Create for final CTA
           const finalCtaNode = document.getElementById('final-cta-shopify-button');
