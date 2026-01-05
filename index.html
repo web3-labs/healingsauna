@@ -183,28 +183,29 @@
             data-widget-id="687d8b30fe05eecece8ffd04">
     </script>
     <script>
-    // Reposition GHL chat widget above sticky buy button
-    (function() {
-      function repositionChatWidget() {
-        const selectors = [
-          '[class*="lc-"][style*="position: fixed"]',
-          '[id*="chat"][style*="position: fixed"]',
-          'iframe[src*="leadconnector"]',
-          '[class*="chat-widget"]'
-        ];
-        selectors.forEach(selector => {
-          document.querySelectorAll(selector).forEach(el => {
-            if (el.style && el.style.bottom !== undefined) {
-              el.style.setProperty('bottom', '80px', 'important');
-            }
-          });
+    // Keep GHL chat widget above the sticky Buy Now bar
+    (function () {
+      function getBottomOffset() {
+        return window.matchMedia('(max-width: 640px)').matches ? 96 : 88;
+      }
+
+      function apply() {
+        var bottom = getBottomOffset() + 'px';
+        var els = document.querySelectorAll('chat-widget, iframe[src*="leadconnector"], iframe[src*="leadconnectorhq"]');
+        els.forEach(function (el) {
+          try {
+            el.style.setProperty('bottom', bottom, 'important');
+            el.style.setProperty('right', '16px', 'important');
+          } catch (e) {}
         });
       }
-      // Run periodically to catch widget after it loads
-      setInterval(repositionChatWidget, 1000);
-      // Also observe DOM changes
-      const observer = new MutationObserver(repositionChatWidget);
-      observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+
+      apply();
+      window.addEventListener('load', apply);
+      window.addEventListener('resize', apply);
+
+      var observer = new MutationObserver(apply);
+      observer.observe(document.body, { childList: true, subtree: true });
     })();
     </script>
   </body>
