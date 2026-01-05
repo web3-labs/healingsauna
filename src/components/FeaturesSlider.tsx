@@ -5,6 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import girlsSaunaImage from "@/assets/girls-sauna.jpg";
 
 const features = [
   {
@@ -18,7 +19,7 @@ const features = [
     description: "Reach optimal far infrared healing temperatures 30% faster with our advanced heating technology — so you can restore, detox, and energize without delay."
   },
   {
-    image: "https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/671e7ff70115a7ce818d5af2_IMG_0014.webp",
+    image: girlsSaunaImage,
     title: "Pure, Clean Heat",
     description: "Our medical-grade sauna radiators use patented far infrared technology with no EMF, delivering a clean, therapeutic heat that deeply penetrates the body for cellular-level healing."
   },
