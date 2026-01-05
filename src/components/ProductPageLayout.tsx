@@ -72,21 +72,6 @@ const ProductPageLayout = () => {
             {/* Add to Cart Button - Shopify Buy Button (Mobile) */}
             <div id="mobile-add-to-cart" className="w-full min-h-[56px]" />
 
-            {/* Financing Option */}
-            <div className="flex items-center justify-between p-3 bg-muted rounded-xl border border-border cursor-pointer hover:border-primary/50 transition-colors">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-6 rounded bg-background flex items-center justify-center border border-border">
-                  <span className="text-[10px] font-bold text-primary">0%</span>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">0% interest for 12 months</p>
-                  <p className="text-xs text-muted-foreground">
-                    As low as <span className="font-semibold">${Math.round(totalPrice / 12)}/mo*</span>
-                  </p>
-                </div>
-              </div>
-              <ChevronRight size={18} className="text-muted-foreground" />
-            </div>
 
             <p className="text-muted-foreground text-sm">
               Rejuvenate, detox, and recover anywhere with a premium far-infrared sauna designed for your lifestyle.
@@ -257,21 +242,6 @@ const ProductPageLayout = () => {
               {/* Add to Cart Button - Shopify Buy Button (Desktop) */}
               <div id="desktop-add-to-cart" className="w-full min-h-[56px]" />
 
-              {/* Financing Option */}
-              <div className="flex items-center justify-between p-3 bg-muted rounded-xl border border-border cursor-pointer hover:border-primary/50 transition-colors">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-6 rounded bg-background flex items-center justify-center border border-border">
-                    <span className="text-[10px] font-bold text-primary">0%</span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">0% interest for 12 months</p>
-                    <p className="text-xs text-muted-foreground">
-                      As low as <span className="font-semibold">${Math.round(totalPrice / 12)}/mo*</span>
-                    </p>
-                  </div>
-                </div>
-                <ChevronRight size={18} className="text-muted-foreground" />
-              </div>
             </div>
 
             {/* Product Description */}
