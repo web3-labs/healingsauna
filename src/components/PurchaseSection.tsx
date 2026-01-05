@@ -59,7 +59,7 @@ const PurchaseSection = () => {
                 />
                 <span className="font-medium text-foreground">3-Year Protection Plan</span>
               </div>
-              <span className="font-bold text-foreground">${protectionPrice}</span>
+              <span className="font-bold text-foreground">FREE</span>
             </label>
             
             <p className="text-muted-foreground text-xs mt-3">

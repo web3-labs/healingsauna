@@ -185,7 +185,7 @@ const ProductPageLayout = () => {
                   />
                   <span className="font-medium text-foreground text-sm">3-Year Protection Plan</span>
                 </div>
-                <span className="font-bold text-foreground">${protectionPrice}</span>
+                <span className="font-bold text-foreground">FREE</span>
               </label>
               
               <p className="text-muted-foreground text-xs mt-2">
@@ -415,7 +415,7 @@ const ProductPageLayout = () => {
                   />
                   <span className="font-medium text-foreground text-sm">3-Year Protection Plan</span>
                 </div>
-                <span className="font-bold text-foreground">${protectionPrice}</span>
+                <span className="font-bold text-foreground">FREE</span>
               </label>
               
               <p className="text-muted-foreground text-xs mt-2">
