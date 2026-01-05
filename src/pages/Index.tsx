@@ -4,6 +4,7 @@ import TrustBar from "@/components/TrustBar";
 import FeaturesSlider from "@/components/FeaturesSlider";
 import DifferenceSection from "@/components/DifferenceSection";
 import ValueSection from "@/components/ValueSection";
+import WhatMakesDifferentSection from "@/components/WhatMakesDifferentSection";
 import VideoSection from "@/components/VideoSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BenefitsStrip from "@/components/BenefitsStrip";
@@ -24,6 +25,7 @@ const Index = () => {
         <BenefitsStrip />
         <FeaturesSlider />
         <DifferenceSection />
+        <WhatMakesDifferentSection />
         <ValueSection />
         <VideoSection />
         <TestimonialsSection />
