@@ -20,24 +20,30 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Links */}
+          {/* Column 1 */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-white/60 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Shipping Info</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Returns</a></li>
+            <ul className="space-y-3 text-white/60 text-sm">
+              <li><a href="https://www.healingsauna.com/benefits" className="hover:text-white transition-colors">Benefits</a></li>
+              <li><a href="https://store.healingsauna.com" className="hover:text-white transition-colors">The Sauna</a></li>
+              <li><a href="https://www.healingsauna.com/research" className="hover:text-white transition-colors">Research</a></li>
             </ul>
           </div>
 
+          {/* Column 2 */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-white/60 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Affiliate Program</a></li>
+            <ul className="space-y-3 text-white/60 text-sm">
+              <li><a href="https://www.healingsauna.com/faq" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="https://www.healingsauna.com/contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="https://www.healingsauna.com/returns" className="hover:text-white transition-colors">Returns</a></li>
+            </ul>
+          </div>
+
+          {/* Column 3 */}
+          <div>
+            <ul className="space-y-3 text-white/60 text-sm">
+              <li><a href="https://www.healingsauna.com/affiliates" className="hover:text-white transition-colors">Affiliates</a></li>
+              <li><a href="https://www.healingsauna.com/track-package" className="hover:text-white transition-colors">Track Package</a></li>
+              <li><a href="https://www.healingsauna.com/setup" className="hover:text-white transition-colors">Setup Guide</a></li>
             </ul>
           </div>
         </div>
