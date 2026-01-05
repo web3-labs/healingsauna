@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import saunaLifestyleValue from "@/assets/sauna-lifestyle-value.png";
 
 const ValueSection = () => {
@@ -27,9 +26,7 @@ const ValueSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl">
-                Buy Now — $2,300
-              </Button>
+              <div id="value-shopify-button" className="w-full min-h-[56px]" />
             </div>
           </div>
 
