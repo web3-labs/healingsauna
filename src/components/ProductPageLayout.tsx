@@ -141,7 +141,7 @@ const ProductPageLayout = () => {
               <h3 className="font-bold text-base mb-2">New Year Sale: Enter code CYBER to save $200</h3>
               <ul className="space-y-1.5">
                 {[
-                  "$699 off applied automatically",
+                  "Enter promo code CYBER at checkout",
                   "Free shipping nationwide",
                   "50% off 3-year extended warranty",
                   "0% financing up to 12 months"
