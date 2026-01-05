@@ -13,7 +13,8 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleBuyNow = () => {
-    // Try to open Shopify cart, or scroll to hero if not ready
+    // Dispatch event to hide sticky bar, then open Shopify cart
+    window.dispatchEvent(new CustomEvent("shopify-action"));
     if (window.shopifyUI) {
       window.shopifyUI.openCart();
     } else {
