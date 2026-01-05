@@ -10,6 +10,7 @@ import BenefitsStrip from "@/components/BenefitsStrip";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import ShopifyBuyButton from "@/components/ShopifyBuyButton";
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
         <FinalCTA />
       </main>
       <Footer />
+      <ShopifyBuyButton />
     </div>
   );
 };

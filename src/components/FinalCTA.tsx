@@ -1,20 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Truck, Shield, Clock } from "lucide-react";
-import { useCart } from "@/contexts/CartContext";
-import saunaProduct from "@/assets/sauna-product-black.png";
 
 const FinalCTA = () => {
-  const { addItem } = useCart();
-
-  const handleAddToCart = () => {
-    addItem({
-      id: "healing-sauna-go-black",
-      name: "GO by Healing Sauna – The Ultimate Infrared Experience",
-      price: 2300,
-      image: saunaProduct,
-    });
-  };
-
   return (
     <section className="relative overflow-hidden py-20 md:py-28">
       {/* Background gradient */}
@@ -42,15 +28,9 @@ const FinalCTA = () => {
             </span>
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button - Shopify Buy Button */}
           <div className="mb-8">
-            <Button 
-              size="xl" 
-              className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-12 shadow-xl hover:shadow-2xl transition-all"
-              onClick={handleAddToCart}
-            >
-              Add to Cart — $2,300
-            </Button>
+            <div id="final-cta-shopify-button" className="inline-block min-h-[56px]" />
           </div>
 
           {/* Trust badges */}
