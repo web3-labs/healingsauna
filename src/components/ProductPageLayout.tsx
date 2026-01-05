@@ -16,16 +16,10 @@ import {
 import { useState } from "react";
 import saunaProduct from "@/assets/sauna-product-black.png";
 import saunaGymLifestyle from "@/assets/sauna-gym-lifestyle.png";
-import { useCart } from "@/contexts/CartContext";
-
-// Shopify configuration
-const SHOPIFY_DOMAIN = "healing-sauna.myshopify.com";
-const VARIANT_ID = "44599449387101";
 
 const ProductPageLayout = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [protectionPlan, setProtectionPlan] = useState(false);
-  const { addItem } = useCart();
   
   const images = [saunaGymLifestyle, saunaProduct];
   const nextImage = () => setSelectedImage(prev => (prev + 1) % images.length);
@@ -34,23 +28,6 @@ const ProductPageLayout = () => {
   const basePrice = 2300;
   const protectionPrice = 199;
   const totalPrice = protectionPlan ? basePrice + protectionPrice : basePrice;
-
-  const handleAddToCart = () => {
-    addItem({
-      id: "healing-sauna-go-black",
-      name: "GO by Healing Sauna – The Ultimate Infrared Experience",
-      price: totalPrice,
-      image: saunaProduct,
-    });
-  };
-
-  const handleBuyNow = () => {
-    // Direct to Shopify checkout
-    window.open(
-      `https://${SHOPIFY_DOMAIN}/cart/${VARIANT_ID}:1`,
-      "_blank"
-    );
-  };
 
   return (
     <section id="hero" className="section-light pt-16 md:pt-24 pb-8 md:pb-16">
@@ -216,10 +193,8 @@ const ProductPageLayout = () => {
               </p>
             </div>
 
-            {/* Add to Cart Button */}
-            <Button variant="hero" size="xl" className="w-full" onClick={handleAddToCart}>
-              Add To Cart — ${totalPrice.toLocaleString()}
-            </Button>
+            {/* Add to Cart Button - Shopify Buy Button */}
+            <div className="shopify-product-button w-full min-h-[56px]" />
 
             {/* Shipping & Trust Features */}
             <div className="bg-card rounded-xl p-4 border border-border">
@@ -448,10 +423,8 @@ const ProductPageLayout = () => {
               </p>
             </div>
 
-            {/* Add to Cart Button */}
-            <Button variant="hero" size="xl" className="w-full text-lg h-14" onClick={handleAddToCart}>
-              Add To Cart
-            </Button>
+            {/* Add to Cart Button - Shopify Buy Button */}
+            <div className="shopify-product-button w-full min-h-[56px]" />
 
             {/* Shipping & Trust Features */}
             <div className="bg-card rounded-xl p-5 border border-border">

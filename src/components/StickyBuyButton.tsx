@@ -1,11 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { useCart } from "@/contexts/CartContext";
-import saunaProduct from "@/assets/sauna-product-black.png";
 
 const StickyBuyButton = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { addItem } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,15 +12,6 @@ const StickyBuyButton = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleAddToCart = () => {
-    addItem({
-      id: "healing-sauna-go-black",
-      name: "GO by Healing Sauna – The Ultimate Infrared Experience",
-      price: 2300,
-      image: saunaProduct,
-    });
-  };
 
   if (!isVisible) return null;
 
@@ -47,10 +34,8 @@ const StickyBuyButton = () => {
             <span className="text-white/50 line-through text-sm ml-2">$2,999</span>
           </div>
 
-          {/* CTA */}
-          <Button variant="hero" size="lg" className="animate-pulse-glow" onClick={handleAddToCart}>
-            Add to Cart
-          </Button>
+          {/* CTA - Shopify Buy Button */}
+          <div id="sticky-shopify-button" className="min-w-[140px]" />
         </div>
       </div>
     </div>

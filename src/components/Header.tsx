@@ -6,6 +6,11 @@ import healingSaunaLogo from "@/assets/healing-sauna-logo.png";
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const scrollToHero = () => {
+    const heroSection = document.getElementById("hero");
+    heroSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black/95 backdrop-blur-md border-b border-white/5">
       <div className="container-section">
@@ -34,8 +39,8 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default" asChild>
-              <a href="#hero">Buy Now</a>
+            <Button variant="hero" size="default" onClick={scrollToHero}>
+              Buy Now
             </Button>
           </div>
 
@@ -61,8 +66,8 @@ const Header = () => {
               <a href="#faq" className="text-white/70 hover:text-white transition-colors">
                 FAQ
               </a>
-              <Button variant="hero" size="lg" className="mt-2" asChild>
-                <a href="#hero">Buy Now</a>
+              <Button variant="hero" size="lg" className="mt-2" onClick={scrollToHero}>
+                Buy Now
               </Button>
             </nav>
           </div>
