@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import healingSaunaLogo from "@/assets/healing-sauna-logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,13 +11,12 @@ const Header = () => {
       <div className="container-section">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center">
-              <span className="text-white font-bold text-sm">HS</span>
-            </div>
-            <span className="text-white font-bold text-lg hidden sm:block">
-              Healing<span className="gradient-text">Sauna</span>™
-            </span>
+          <a href="#" className="flex items-center">
+            <img 
+              src={healingSaunaLogo} 
+              alt="Healing Sauna" 
+              className="h-8 md:h-10 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
