@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import saunaProduct from "@/assets/sauna-product-main.png";
+import saunaLifestyleValue from "@/assets/sauna-lifestyle-value.png";
 
 const ValueSection = () => {
   return (
@@ -37,7 +37,7 @@ const ValueSection = () => {
           <div className="relative">
             <div className="bg-muted rounded-2xl p-8 md:p-12">
               <img
-                src={saunaProduct}
+                src={saunaLifestyleValue}
                 alt="Healing Sauna GO with accessories"
                 className="w-full h-auto rounded-xl"
               />
