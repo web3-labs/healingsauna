@@ -3,12 +3,23 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import healingSaunaLogo from "@/assets/healing-sauna-logo.png";
 
+declare global {
+  interface Window {
+    shopifyUI: any;
+  }
+}
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const scrollToHero = () => {
-    const heroSection = document.getElementById("hero");
-    heroSection?.scrollIntoView({ behavior: "smooth" });
+  const handleBuyNow = () => {
+    // Try to open Shopify cart, or scroll to hero if not ready
+    if (window.shopifyUI) {
+      window.shopifyUI.openCart();
+    } else {
+      const heroSection = document.getElementById("hero");
+      heroSection?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -39,7 +50,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default" onClick={scrollToHero}>
+            <Button variant="hero" size="default" onClick={handleBuyNow}>
               Buy Now
             </Button>
           </div>
@@ -66,7 +77,7 @@ const Header = () => {
               <a href="#faq" className="text-white/70 hover:text-white transition-colors">
                 FAQ
               </a>
-              <Button variant="hero" size="lg" className="mt-2" onClick={scrollToHero}>
+              <Button variant="hero" size="lg" className="mt-2" onClick={handleBuyNow}>
                 Buy Now
               </Button>
             </nav>
