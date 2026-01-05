@@ -77,10 +77,8 @@ const HeroSection = () => {
                 </li>)}
             </ul>
 
-            {/* CTA Button */}
-            <Button variant="hero" size="xl" className="w-full">
-              Buy Now — $2,300
-            </Button>
+            {/* CTA Button - Shopify Buy Button (Mobile Hero) */}
+            <div id="mobile-hero-shopify-button" className="w-full min-h-[56px]" />
 
             {/* Trust Badges */}
             <div className="flex justify-center gap-6 text-muted-foreground text-xs pt-2">
@@ -142,9 +140,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Button variant="hero" size="xl" className="flex-1 sm:flex-none">
-                Buy Now — $2,300
-              </Button>
+              <div id="desktop-hero-shopify-button" className="flex-1 sm:flex-none min-h-[56px]" />
               <Button variant="outline" size="xl" className="flex-1 sm:flex-none border-2">
                 Learn More
               </Button>

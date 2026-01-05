@@ -185,39 +185,23 @@ const ShopifyBuyButton = () => {
 
         const initProductButtons = () => {
           // All buttons now use buyNowOptions to go directly to checkout
-          mountOnce("mobile-add-to-cart", (node) => {
-            ui.createComponent("product", {
-              id: "7918751318109",
-              node,
-              moneyFormat: "%24%7B%7Bamount%7D%7D",
-              options: buyNowOptions,
-            });
-          });
+          const buttonIds = [
+            "mobile-add-to-cart",
+            "desktop-add-to-cart",
+            "mobile-hero-shopify-button",
+            "desktop-hero-shopify-button",
+            "final-cta-shopify-button",
+            "sticky-shopify-button",
+          ];
 
-          mountOnce("desktop-add-to-cart", (node) => {
-            ui.createComponent("product", {
-              id: "7918751318109",
-              node,
-              moneyFormat: "%24%7B%7Bamount%7D%7D",
-              options: buyNowOptions,
-            });
-          });
-
-          mountOnce("final-cta-shopify-button", (node) => {
-            ui.createComponent("product", {
-              id: "7918751318109",
-              node,
-              moneyFormat: "%24%7B%7Bamount%7D%7D",
-              options: buyNowOptions,
-            });
-          });
-
-          mountOnce("sticky-shopify-button", (node) => {
-            ui.createComponent("product", {
-              id: "7918751318109",
-              node,
-              moneyFormat: "%24%7B%7Bamount%7D%7D",
-              options: buyNowOptions,
+          buttonIds.forEach((id) => {
+            mountOnce(id, (node) => {
+              ui.createComponent("product", {
+                id: "7918751318109",
+                node,
+                moneyFormat: "%24%7B%7Bamount%7D%7D",
+                options: buyNowOptions,
+              });
             });
           });
         };
