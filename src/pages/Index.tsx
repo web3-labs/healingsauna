@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import ProductPageLayout from "@/components/ProductPageLayout";
 import TrustBar from "@/components/TrustBar";
-import FeaturesSection from "@/components/FeaturesSection";
+import FeaturesSlider from "@/components/FeaturesSlider";
 import DifferenceSection from "@/components/DifferenceSection";
 import ValueSection from "@/components/ValueSection";
 import VideoSection from "@/components/VideoSection";
@@ -21,7 +21,7 @@ const Index = () => {
         <ProductPageLayout />
         <TrustBar />
         <BenefitsStrip />
-        <FeaturesSection />
+        <FeaturesSlider />
         <DifferenceSection />
         <ValueSection />
         <VideoSection />
