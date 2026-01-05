@@ -1,3 +1,5 @@
+import healingSaunaLogo from '@/assets/healing-sauna-logo-full.png';
+
 const Footer = () => {
   return (
     <footer className="section-dark border-t border-white/10 py-12">
@@ -5,13 +7,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center">
-                <span className="text-white font-bold text-sm">HS</span>
-              </div>
-              <span className="text-white font-bold text-lg">
-                Healing<span className="gradient-text">Sauna</span>™
-              </span>
+            <div className="mb-4">
+              <img 
+                src={healingSaunaLogo} 
+                alt="Healing Sauna" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-white/60 text-sm max-w-sm">
               Premium portable far-infrared saunas for recovery, detox, and wellness. 
