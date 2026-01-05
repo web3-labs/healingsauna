@@ -48,7 +48,7 @@ const StickyBuyButton = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-16 z-50 bg-brand-black/95 backdrop-blur-md border-t border-white/10 py-2 md:py-3 animate-fade-in">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-brand-black/95 backdrop-blur-md border-t border-white/10 py-2 md:py-3 animate-fade-in">
       <div className="container-section">
         <div className="flex items-center justify-between gap-3">
           {/* Product info - hidden on very small screens */}
