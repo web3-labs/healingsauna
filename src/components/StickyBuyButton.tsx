@@ -1,17 +1,49 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const StickyBuyButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Show button after scrolling past hero section (approximately 600px)
+  const handleScroll = useCallback(() => {
+    // Show button after scrolling past hero section (approximately 600px)
+    if (!dismissed) {
       setIsVisible(window.scrollY > 600);
+    }
+  }, [dismissed]);
+
+  // Listen for shopify-action event to dismiss the sticky bar
+  useEffect(() => {
+    const handleShopifyAction = () => {
+      setDismissed(true);
+      setIsVisible(false);
     };
 
+    window.addEventListener("shopify-action", handleShopifyAction);
+    return () => window.removeEventListener("shopify-action", handleShopifyAction);
+  }, []);
+
+  // Also listen for Shopify cart open events
+  useEffect(() => {
+    const checkShopifyCart = () => {
+      // Check if shopify cart was opened
+      const cartFrame = document.querySelector('[class*="shopify-buy__cart"]');
+      if (cartFrame) {
+        setDismissed(true);
+        setIsVisible(false);
+      }
+    };
+
+    // Observe DOM for Shopify cart appearance
+    const observer = new MutationObserver(checkShopifyCart);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   if (!isVisible) return null;
 

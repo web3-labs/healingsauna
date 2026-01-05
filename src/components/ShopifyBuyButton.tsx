@@ -26,6 +26,10 @@ const ShopifyBuyButton = () => {
 
       window.shopifyClient = client;
 
+      const dispatchShopifyAction = () => {
+        window.dispatchEvent(new CustomEvent("shopify-action"));
+      };
+
       const options = {
         product: {
           styles: {
@@ -60,6 +64,9 @@ const ShopifyBuyButton = () => {
             price: false,
           },
           text: { button: "Add to cart" },
+          events: {
+            addVariantToCart: dispatchShopifyAction,
+          },
         },
         modalProduct: {
           contents: {
