@@ -118,6 +118,14 @@ const ProductPageLayout = () => {
               <span className="text-muted-foreground text-sm">4.9 Stars (127 Reviews)</span>
             </div>
 
+            <div className="flex items-center gap-3 flex-wrap">
+              <span className="text-2xl font-bold text-foreground">${totalPrice.toLocaleString()}</span>
+              <span className="text-muted-foreground line-through text-sm">$2,999</span>
+              <span className="text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-cyan px-2 py-1 rounded">
+                $699 off
+              </span>
+            </div>
+
             {/* Add to Cart Button - Shopify Buy Button (Mobile) */}
             <div id="mobile-add-to-cart" className="w-full min-h-[56px]" />
 
@@ -131,14 +139,6 @@ const ProductPageLayout = () => {
                   {feature}
                 </li>)}
             </ul>
-
-            <div className="flex items-center gap-3 flex-wrap">
-              <span className="text-2xl font-bold text-foreground">${totalPrice.toLocaleString()}</span>
-              <span className="text-muted-foreground line-through text-sm">$2,999</span>
-              <span className="text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-cyan px-2 py-1 rounded">
-                $699 off
-              </span>
-            </div>
 
             {/* New Year Sale Banner */}
             <div className="bg-foreground text-background rounded-xl p-4">
