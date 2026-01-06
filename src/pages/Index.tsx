@@ -24,7 +24,6 @@ const Index = () => {
         <ProductPageLayout />
         <BenefitsStrip />
         <VideoSection />
-        <TrustBar />
         <FeaturesSlider />
         <DifferenceSection />
         <ClientTestimonialsSlider />
@@ -34,6 +33,7 @@ const Index = () => {
         <ProductDetailsSection />
         <FAQSection />
         <FinalCTA />
+        <TrustBar />
       </main>
       <Footer />
       <StickyBuyButton />
