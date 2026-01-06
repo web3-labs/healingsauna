@@ -22,9 +22,9 @@ const Index = () => {
       <Header />
       <main>
         <ProductPageLayout />
-        <TrustBar />
-        <VideoSection />
         <BenefitsStrip />
+        <VideoSection />
+        <TrustBar />
         <FeaturesSlider />
         <DifferenceSection />
         <ClientTestimonialsSlider />
