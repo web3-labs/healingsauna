@@ -122,6 +122,12 @@ const ProductPageLayout = () => {
               Rejuvenate, detox, and recover anywhere with a premium far-infrared sauna designed for your lifestyle.
             </p>
 
+            <ul className="space-y-2">
+              {["Portable & foldable design", "Far-infrared full-body heat therapy", "Heats up in under 10 minutes", "Perfect for home, gym, or travel"].map((feature, index) => <li key={index} className="flex items-start gap-2 text-foreground text-sm">
+                  <span className="text-primary mt-1">•</span>
+                  {feature}
+                </li>)}
+            </ul>
 
             <div className="flex items-center gap-3 flex-wrap">
               <span className="text-2xl font-bold text-foreground">${totalPrice.toLocaleString()}</span>
@@ -133,13 +139,6 @@ const ProductPageLayout = () => {
 
             {/* Add to Cart Button - Shopify Buy Button (Mobile) */}
             <div id="mobile-add-to-cart" className="w-full min-h-[56px]" />
-
-            <ul className="space-y-2">
-              {["Portable & foldable design", "Far-infrared full-body heat therapy", "Heats up in under 10 minutes", "Perfect for home, gym, or travel"].map((feature, index) => <li key={index} className="flex items-start gap-2 text-foreground text-sm">
-                  <span className="text-primary mt-1">•</span>
-                  {feature}
-                </li>)}
-            </ul>
 
             {/* New Year Sale Banner */}
             <div className="bg-foreground text-background rounded-xl p-4">
