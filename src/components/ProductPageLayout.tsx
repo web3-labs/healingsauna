@@ -9,10 +9,11 @@ import saunaWomanUsing from "@/assets/sauna-woman-using.webp";
 import saunaRoomSetup from "@/assets/sauna-room-setup.webp";
 import saunaRecoveryLifestyle from "@/assets/sauna-recovery-lifestyle.png";
 import saunaWomanMain from "@/assets/sauna-woman-main.png";
+import saunaProductHero from "@/assets/sauna-product-hero.png";
 const ProductPageLayout = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [protectionPlan, setProtectionPlan] = useState(false);
-  const images = [saunaWomanMain, saunaWomanUsing, saunaRecoveryLifestyle, saunaGymLifestyle, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
+  const images = [saunaProductHero, saunaWomanMain, saunaWomanUsing, saunaRecoveryLifestyle, saunaGymLifestyle, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
   const nextImage = () => setSelectedImage(prev => (prev + 1) % images.length);
   const prevImage = () => setSelectedImage(prev => (prev - 1 + images.length) % images.length);
   const basePrice = 2300;
