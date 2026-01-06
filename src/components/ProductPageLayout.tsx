@@ -14,34 +14,56 @@ import saunaWomanMain from "@/assets/sauna-woman-main.png";
 import saunaProductHero from "@/assets/sauna-product-hero.png";
 
 const ProductPageLayout = () => {
-  const [selectedImage, setSelectedImage] = useState(0);
+  const [selectedImageMobile, setSelectedImageMobile] = useState(0);
+  const [selectedImageDesktop, setSelectedImageDesktop] = useState(0);
   const [protectionPlan, setProtectionPlan] = useState(false);
   const images = [saunaProductHero, saunaWomanMain, saunaWomanUsing, saunaRecoveryLifestyle, saunaGymLifestyle, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+  // Mobile carousel
+  const [mobileRef, mobileApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
   ]);
 
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  // Desktop carousel
+  const [desktopRef, desktopApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
+  ]);
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedImage(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
+  const scrollPrevMobile = useCallback(() => mobileApi?.scrollPrev(), [mobileApi]);
+  const scrollNextMobile = useCallback(() => mobileApi?.scrollNext(), [mobileApi]);
+  const scrollToMobile = useCallback((index: number) => mobileApi?.scrollTo(index), [mobileApi]);
 
-  const scrollTo = useCallback((index: number) => {
-    emblaApi?.scrollTo(index);
-  }, [emblaApi]);
+  const scrollPrevDesktop = useCallback(() => desktopApi?.scrollPrev(), [desktopApi]);
+  const scrollNextDesktop = useCallback(() => desktopApi?.scrollNext(), [desktopApi]);
+  const scrollToDesktop = useCallback((index: number) => desktopApi?.scrollTo(index), [desktopApi]);
+
+  const onSelectMobile = useCallback(() => {
+    if (!mobileApi) return;
+    setSelectedImageMobile(mobileApi.selectedScrollSnap());
+  }, [mobileApi]);
+
+  const onSelectDesktop = useCallback(() => {
+    if (!desktopApi) return;
+    setSelectedImageDesktop(desktopApi.selectedScrollSnap());
+  }, [desktopApi]);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
+    if (!mobileApi) return;
+    onSelectMobile();
+    mobileApi.on("select", onSelectMobile);
     return () => {
-      emblaApi.off("select", onSelect);
+      mobileApi.off("select", onSelectMobile);
     };
-  }, [emblaApi, onSelect]);
+  }, [mobileApi, onSelectMobile]);
+
+  useEffect(() => {
+    if (!desktopApi) return;
+    onSelectDesktop();
+    desktopApi.on("select", onSelectDesktop);
+    return () => {
+      desktopApi.off("select", onSelectDesktop);
+    };
+  }, [desktopApi, onSelectDesktop]);
   const basePrice = 2300;
   const protectionPrice = 199;
   const totalPrice = protectionPlan ? basePrice + protectionPrice : basePrice;
@@ -51,7 +73,7 @@ const ProductPageLayout = () => {
         <div className="lg:hidden">
           {/* Product Image with Navigation */}
           <div className="relative -mx-4 sm:-mx-6 mb-4">
-            <div className="relative overflow-hidden bg-muted" ref={emblaRef}>
+            <div className="relative overflow-hidden bg-muted" ref={mobileRef}>
               <div className="flex">
                 {images.map((img, index) => (
                   <div key={index} className="flex-[0_0_100%] min-w-0">
@@ -61,17 +83,17 @@ const ProductPageLayout = () => {
               </div>
               
               {/* Navigation Arrows */}
-              <button onClick={scrollPrev} className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/30 transition-colors">
+              <button onClick={scrollPrevMobile} className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/30 transition-colors">
                 <ChevronLeft size={24} />
               </button>
-              <button onClick={scrollNext} className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/30 transition-colors">
+              <button onClick={scrollNextMobile} className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/30 transition-colors">
                 <ChevronRight size={24} />
               </button>
             </div>
 
             {/* Thumbnail Gallery - Horizontal Scroll */}
             <div className="flex gap-2 mt-3 px-4 overflow-x-auto pb-2 scrollbar-hide">
-              {images.map((img, index) => <button key={index} onClick={() => scrollTo(index)} className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${selectedImage === index ? "border-primary" : "border-border"}`}>
+              {images.map((img, index) => <button key={index} onClick={() => scrollToMobile(index)} className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${selectedImageMobile === index ? "border-primary" : "border-border"}`}>
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </button>)}
             </div>
@@ -221,7 +243,7 @@ const ProductPageLayout = () => {
           <div className="sticky top-24">
             <div className="relative">
               {/* Main Image */}
-              <div className="relative rounded-2xl overflow-hidden bg-muted border border-border" ref={emblaRef}>
+              <div className="relative rounded-2xl overflow-hidden bg-muted border border-border" ref={desktopRef}>
                 <div className="flex">
                   {images.map((img, index) => (
                     <div key={index} className="flex-[0_0_100%] min-w-0">
@@ -231,17 +253,17 @@ const ProductPageLayout = () => {
                 </div>
                 
                 {/* Navigation Arrows */}
-                <button onClick={scrollPrev} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-white transition-colors shadow-lg">
+                <button onClick={scrollPrevDesktop} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-white transition-colors shadow-lg">
                   <ChevronLeft size={24} />
                 </button>
-                <button onClick={scrollNext} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-white transition-colors shadow-lg">
+                <button onClick={scrollNextDesktop} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-white transition-colors shadow-lg">
                   <ChevronRight size={24} />
                 </button>
               </div>
 
               {/* Thumbnail Gallery */}
               <div className="flex gap-3 mt-4">
-                {images.map((img, index) => <button key={index} onClick={() => scrollTo(index)} className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${selectedImage === index ? "border-primary ring-2 ring-primary/20" : "border-border hover:border-primary/50"}`}>
+                {images.map((img, index) => <button key={index} onClick={() => scrollToDesktop(index)} className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${selectedImageDesktop === index ? "border-primary ring-2 ring-primary/20" : "border-border hover:border-primary/50"}`}>
                     <img src={img} alt="" className="w-full h-full object-cover" />
                   </button>)}
               </div>
