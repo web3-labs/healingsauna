@@ -45,7 +45,7 @@ Physiological Response: This warmth causes vasodilation (widening of blood vesse
 
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4 bg-white/5 rounded-xl">
-                  <div className="text-3xl font-bold gradient-text mb-1">1.5"</div>
+                  <div className="text-3xl font-bold gradient-text mb-1">2-3"</div>
                   <div className="text-white/60 text-sm">Heat Penetration</div>
                 </div>
                 <div className="text-center p-4 bg-white/5 rounded-xl">
