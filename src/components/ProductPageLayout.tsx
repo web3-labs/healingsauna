@@ -81,9 +81,6 @@ const ProductPageLayout = () => {
               </p>
             </div>
 
-            {/* Add to Cart Button - Shopify Buy Button (Mobile) */}
-            <div id="mobile-add-to-cart" className="w-full min-h-[56px]" />
-
             <div className="flex items-center gap-3 flex-wrap">
               <span className="text-2xl font-bold text-foreground">${totalPrice.toLocaleString()}</span>
               <span className="text-muted-foreground line-through text-sm">$2,999</span>
@@ -91,6 +88,9 @@ const ProductPageLayout = () => {
                 $699 off
               </span>
             </div>
+
+            {/* Add to Cart Button - Shopify Buy Button (Mobile) */}
+            <div id="mobile-add-to-cart" className="w-full min-h-[56px]" />
 
 
             <p className="text-muted-foreground text-sm">
@@ -251,17 +251,17 @@ const ProductPageLayout = () => {
                 </p>
               </div>
 
-              {/* Add to Cart Button - Shopify Buy Button (Desktop) */}
-              <div id="desktop-add-to-cart" className="w-full min-h-[56px] mb-4" />
-
               {/* Pricing */}
-              <div className="flex items-center gap-3 flex-wrap">
+              <div className="flex items-center gap-3 flex-wrap mb-4">
                 <span className="text-3xl font-bold text-foreground">${totalPrice.toLocaleString()}</span>
                 <span className="text-muted-foreground line-through">$2,999</span>
                 <span className="text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-cyan px-2 py-1 rounded">
                   $699 off
                 </span>
               </div>
+
+              {/* Add to Cart Button - Shopify Buy Button (Desktop) */}
+              <div id="desktop-add-to-cart" className="w-full min-h-[56px]" />
 
             </div>
 
