@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black/95 backdrop-blur-md border-b border-white/5">
       <div className="container-section">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
             <img 
@@ -36,8 +36,8 @@ const Header = () => {
             />
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          {/* Desktop Navigation - Aligned Right */}
+          <nav className="hidden md:flex items-center gap-6 ml-auto">
             <a href="https://store.healingsauna.com" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
               The Sauna
             </a>
@@ -60,13 +60,6 @@ const Header = () => {
               Contact
             </a>
           </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="hero" size="default" onClick={handleBuyNow}>
-              Buy Now
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
