@@ -322,27 +322,27 @@ const ProductPageLayout = () => {
                 </span>
               </div>
 
+              {/* Product Description */}
+              <div>
+                <p className="text-muted-foreground mb-4">
+                  Rejuvenate, detox, and recover anywhere with a premium far-infrared sauna designed for your lifestyle.
+                </p>
+
+                <ul className="space-y-2">
+                  {["Portable & foldable design", "Far-infrared full-body heat therapy", "Heats up in under 10 minutes", "Perfect for home, gym, or travel"].map((feature, index) => <li key={index} className="flex items-start gap-2 text-foreground text-sm">
+                      <span className="text-primary mt-0.5">•</span>
+                      {feature}
+                    </li>)}
+                </ul>
+
+                <button className="text-sm text-primary font-medium mt-3 hover:underline">
+                  View More Details
+                </button>
+              </div>
+
               {/* Add to Cart Button - Shopify Buy Button (Desktop) */}
               <div id="desktop-add-to-cart" className="w-full min-h-[56px]" />
 
-            </div>
-
-            {/* Product Description */}
-            <div>
-              <p className="text-muted-foreground mb-4">
-                Rejuvenate, detox, and recover anywhere with a premium far-infrared sauna designed for your lifestyle.
-              </p>
-
-              <ul className="space-y-2">
-                {["Portable & foldable design", "Far-infrared full-body heat therapy", "Heats up in under 10 minutes", "Perfect for home, gym, or travel"].map((feature, index) => <li key={index} className="flex items-start gap-2 text-foreground text-sm">
-                    <span className="text-primary mt-0.5">•</span>
-                    {feature}
-                  </li>)}
-              </ul>
-
-              <button className="text-sm text-primary font-medium mt-3 hover:underline">
-                View More Details
-              </button>
             </div>
 
             {/* New Year Sale Banner */}
