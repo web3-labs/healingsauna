@@ -12,7 +12,6 @@ import saunaRoomSetup from "@/assets/sauna-room-setup.webp";
 import saunaRecoveryLifestyle from "@/assets/sauna-recovery-lifestyle.png";
 import saunaWomanMain from "@/assets/sauna-woman-main.png";
 import saunaProductHero from "@/assets/sauna-product-hero.png";
-
 const ProductPageLayout = () => {
   const [selectedImageMobile, setSelectedImageMobile] = useState(0);
   const [selectedImageDesktop, setSelectedImageDesktop] = useState(0);
@@ -20,33 +19,36 @@ const ProductPageLayout = () => {
   const images = [saunaProductHero, saunaWomanMain, saunaWomanUsing, saunaRecoveryLifestyle, saunaGymLifestyle, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
 
   // Mobile carousel
-  const [mobileRef, mobileApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
-  ]);
+  const [mobileRef, mobileApi] = useEmblaCarousel({
+    loop: true
+  }, [Autoplay({
+    delay: 4000,
+    stopOnInteraction: false,
+    stopOnMouseEnter: true
+  })]);
 
   // Desktop carousel
-  const [desktopRef, desktopApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
-  ]);
-
+  const [desktopRef, desktopApi] = useEmblaCarousel({
+    loop: true
+  }, [Autoplay({
+    delay: 4000,
+    stopOnInteraction: false,
+    stopOnMouseEnter: true
+  })]);
   const scrollPrevMobile = useCallback(() => mobileApi?.scrollPrev(), [mobileApi]);
   const scrollNextMobile = useCallback(() => mobileApi?.scrollNext(), [mobileApi]);
   const scrollToMobile = useCallback((index: number) => mobileApi?.scrollTo(index), [mobileApi]);
-
   const scrollPrevDesktop = useCallback(() => desktopApi?.scrollPrev(), [desktopApi]);
   const scrollNextDesktop = useCallback(() => desktopApi?.scrollNext(), [desktopApi]);
   const scrollToDesktop = useCallback((index: number) => desktopApi?.scrollTo(index), [desktopApi]);
-
   const onSelectMobile = useCallback(() => {
     if (!mobileApi) return;
     setSelectedImageMobile(mobileApi.selectedScrollSnap());
   }, [mobileApi]);
-
   const onSelectDesktop = useCallback(() => {
     if (!desktopApi) return;
     setSelectedImageDesktop(desktopApi.selectedScrollSnap());
   }, [desktopApi]);
-
   useEffect(() => {
     if (!mobileApi) return;
     onSelectMobile();
@@ -55,7 +57,6 @@ const ProductPageLayout = () => {
       mobileApi.off("select", onSelectMobile);
     };
   }, [mobileApi, onSelectMobile]);
-
   useEffect(() => {
     if (!desktopApi) return;
     onSelectDesktop();
@@ -75,11 +76,9 @@ const ProductPageLayout = () => {
           <div className="relative -mx-4 sm:-mx-6 mb-4">
             <div className="relative overflow-hidden bg-muted" ref={mobileRef}>
               <div className="flex">
-                {images.map((img, index) => (
-                  <div key={index} className="flex-[0_0_100%] min-w-0">
+                {images.map((img, index) => <div key={index} className="flex-[0_0_100%] min-w-0">
                     <img src={img} alt="Healing Sauna GO - Black" className="w-full h-auto object-cover aspect-square" />
-                  </div>
-                ))}
+                  </div>)}
               </div>
               
               {/* Navigation Arrows */}
@@ -225,11 +224,9 @@ const ProductPageLayout = () => {
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden bg-muted border border-border" ref={desktopRef}>
                 <div className="flex">
-                  {images.map((img, index) => (
-                    <div key={index} className="flex-[0_0_100%] min-w-0">
+                  {images.map((img, index) => <div key={index} className="flex-[0_0_100%] min-w-0">
                       <img src={img} alt="Healing Sauna GO - Black" className="w-full h-auto aspect-square object-cover" />
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
                 
                 {/* Navigation Arrows */}
@@ -255,9 +252,7 @@ const ProductPageLayout = () => {
             {/* Product Title & Rating */}
             <div>
               <div className="flex items-start justify-between gap-4 mb-3">
-                <h1 className="text-3xl font-bold text-foreground leading-tight">
-                  The Healing Sauna
-                </h1>
+                <h1 className="text-3xl font-bold text-foreground leading-tight">Healing Sauna</h1>
                 <span className="flex-shrink-0 inline-flex items-center gap-1 text-xs font-medium text-green-600 bg-green-100 px-2.5 py-1.5 rounded-full">
                   <Check size={12} />
                   In Stock
