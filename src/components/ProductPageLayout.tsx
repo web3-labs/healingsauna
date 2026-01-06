@@ -122,25 +122,6 @@ const ProductPageLayout = () => {
               Rejuvenate, detox, and recover anywhere with a premium far-infrared sauna designed for your lifestyle.
             </p>
 
-            {/* Protection Plan */}
-            <div className="bg-card rounded-xl p-4 border border-border">
-              <div className="flex items-center gap-2 mb-2">
-                <Shield className="text-primary" size={18} />
-                <h3 className="text-sm font-bold text-foreground">1 Year</h3>
-              </div>
-              
-              <label className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary/50 cursor-pointer transition-colors">
-                <div className="flex items-center gap-3">
-                  <Checkbox checked={protectionPlan} onCheckedChange={checked => setProtectionPlan(checked as boolean)} className="data-[state=checked]:bg-primary data-[state=checked]:border-primary" />
-                  <span className="font-medium text-foreground text-sm">1-Year Protection Plan</span>
-                </div>
-                <span className="font-bold text-foreground">FREE</span>
-              </label>
-              
-              <p className="text-muted-foreground text-xs mt-2">
-                What's Covered? <span className="text-primary underline cursor-pointer">Learn more</span>
-              </p>
-            </div>
 
             <div className="flex items-center gap-3 flex-wrap">
               <span className="text-2xl font-bold text-foreground">${totalPrice.toLocaleString()}</span>
