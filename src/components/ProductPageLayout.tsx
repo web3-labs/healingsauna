@@ -10,7 +10,7 @@ import saunaRoomSetup from "@/assets/sauna-room-setup.webp";
 const ProductPageLayout = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [protectionPlan, setProtectionPlan] = useState(false);
-  const images = [saunaGymLifestyle, saunaWomanUsing, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
+  const images = [saunaWomanUsing, saunaGymLifestyle, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
   const nextImage = () => setSelectedImage(prev => (prev + 1) % images.length);
   const prevImage = () => setSelectedImage(prev => (prev - 1 + images.length) % images.length);
   const basePrice = 2300;
