@@ -9,6 +9,11 @@ import {
 
 const testimonials = [
   {
+    image: "https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/67e27f34f7d1348b7ac6e029_Screenshot%202025-03-25%20at%203.01.20%E2%80%AFAM.webp",
+    name: "Peter Diamandis",
+    quote: "I use my Healing Sauna GO every day, and am even taking Zoom calls in it."
+  },
+  {
     image: "https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/67e27ef837030d2ecf15f7ed_IMG_7022%202.webp",
     name: "Brian Lewis",
     quote: "I've been in the fitness world 15 years, and this is the one tool I now tell every client to invest in. Muscle recovery, fat burn, and total relaxation—in one compact system."
@@ -17,11 +22,6 @@ const testimonials = [
     image: "https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/6835b160b5648a4b699ce607_Bitmap.webp",
     name: "Kendall kay",
     quote: "After just a few weeks of using the sauna, my skin looked brighter and tighter. It's my new go-to ritual after workouts. Bonus: it fits in my apartment closet."
-  },
-  {
-    image: "https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/67e27f34f7d1348b7ac6e029_Screenshot%202025-03-25%20at%203.01.20%E2%80%AFAM.webp",
-    name: "Peter Diamandis",
-    quote: "I use my Healing Sauna GO every day, and am even taking Zoom calls in it."
   },
   {
     image: "https://cdn.prod.website-files.com/66f3459edfb782f94764ae4c/685167c3c98036acebe0f5b4_bizzie.webp",
