@@ -118,6 +118,9 @@ const ProductPageLayout = () => {
               <span className="text-muted-foreground text-sm">4.9 Stars (127 Reviews)</span>
             </div>
 
+            {/* Add to Cart Button - Shopify Buy Button (Mobile) */}
+            <div id="mobile-add-to-cart" className="w-full min-h-[56px]" />
+
             <p className="text-muted-foreground text-sm">
               Rejuvenate, detox, and recover anywhere with a premium far-infrared sauna designed for your lifestyle.
             </p>
@@ -136,9 +139,6 @@ const ProductPageLayout = () => {
                 $699 off
               </span>
             </div>
-
-            {/* Add to Cart Button - Shopify Buy Button (Mobile) */}
-            <div id="mobile-add-to-cart" className="w-full min-h-[56px]" />
 
             {/* New Year Sale Banner */}
             <div className="bg-foreground text-background rounded-xl p-4">
