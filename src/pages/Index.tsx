@@ -14,6 +14,7 @@ import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import ShopifyBuyButton from "@/components/ShopifyBuyButton";
 import StickyBuyButton from "@/components/StickyBuyButton";
+import ClientTestimonialsSlider from "@/components/ClientTestimonialsSlider";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
         <BenefitsStrip />
         <FeaturesSlider />
         <DifferenceSection />
+        <ClientTestimonialsSlider />
         <WhatMakesDifferentSection />
         <ValueSection />
         <TestimonialsSection />
