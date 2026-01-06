@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-const features = ["Far-infrared wavelength (5.6-15 microns)", "360° full-body heat coverage", "Low EMF certified panels", "Medical-grade materials", "Full body immersion", "Heats up in 1 minute"];
+const features = ["Far-infrared wavelength (5.6-15 microns)", "360° full-body heat coverage", "Low EMF", "Medical-grade materials", "Full body immersion", "Heats up in 1 minute"];
 const DifferenceSection = () => {
   return <section className="section-dark py-20 md:py-28">
       <div className="container-section">
