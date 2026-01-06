@@ -62,7 +62,7 @@ const ProductPageLayout = () => {
             </div>
 
             <div className="flex items-center gap-3 flex-wrap">
-              <span className="text-2xl font-bold text-foreground">${totalPrice.toLocaleString()} USD</span>
+              <span className="text-2xl font-bold text-foreground">${totalPrice.toLocaleString()}</span>
               <span className="text-muted-foreground line-through text-sm">$2,999</span>
               <span className="text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-cyan px-2 py-1 rounded">
                 $699 off
@@ -232,7 +232,7 @@ const ProductPageLayout = () => {
 
               {/* Pricing */}
               <div className="flex items-center gap-3 flex-wrap mb-4">
-                <span className="text-3xl font-bold text-foreground">${totalPrice.toLocaleString()} USD</span>
+                <span className="text-3xl font-bold text-foreground">${totalPrice.toLocaleString()}</span>
                 <span className="text-muted-foreground line-through">$2,999</span>
                 <span className="text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-cyan px-2 py-1 rounded">
                   $699 off
