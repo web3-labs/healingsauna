@@ -19,7 +19,7 @@ const ProductPageLayout = () => {
   const images = [saunaProductHero, saunaWomanMain, saunaWomanUsing, saunaRecoveryLifestyle, saunaGymLifestyle, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
   ]);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
