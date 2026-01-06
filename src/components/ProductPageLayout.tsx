@@ -293,25 +293,6 @@ const ProductPageLayout = () => {
                 </span>
               </div>
 
-              {/* Protection Plan */}
-              <div className="bg-card rounded-xl p-5 border border-border mb-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <Shield className="text-primary" size={20} />
-                  <h3 className="text-base font-bold text-foreground">Add Protection Plan</h3>
-                </div>
-                
-                <label className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-primary/50 cursor-pointer transition-colors">
-                  <div className="flex items-center gap-3">
-                    <Checkbox checked={protectionPlan} onCheckedChange={checked => setProtectionPlan(checked as boolean)} className="data-[state=checked]:bg-primary data-[state=checked]:border-primary" />
-                    <span className="font-medium text-foreground text-sm">1-Year Protection Plan</span>
-                  </div>
-                  <span className="font-bold text-foreground">FREE</span>
-                </label>
-                
-                <p className="text-muted-foreground text-xs mt-2">
-                  What's Covered? <span className="text-primary underline cursor-pointer">Learn more</span>
-                </p>
-              </div>
 
               {/* Pricing */}
               <div className="flex items-center gap-3 flex-wrap mb-4">
