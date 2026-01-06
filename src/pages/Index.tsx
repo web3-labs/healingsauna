@@ -22,7 +22,6 @@ const Index = () => {
       <Header />
       <main>
         <ProductPageLayout />
-        <BenefitsStrip />
         <VideoSection />
         <FeaturesSlider />
         <DifferenceSection />
@@ -33,6 +32,7 @@ const Index = () => {
         <ProductDetailsSection />
         <FAQSection />
         <FinalCTA />
+        <BenefitsStrip />
         <TrustBar />
       </main>
       <Footer />
