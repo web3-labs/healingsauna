@@ -23,6 +23,7 @@ const ProductPageLayout = () => {
     loop: true
   }, [Autoplay({
     delay: 4000,
+    playOnInit: true,
     stopOnInteraction: false,
     stopOnMouseEnter: true
   })]);
@@ -32,6 +33,7 @@ const ProductPageLayout = () => {
     loop: true
   }, [Autoplay({
     delay: 4000,
+    playOnInit: true,
     stopOnInteraction: false,
     stopOnMouseEnter: true
   })]);
