@@ -172,11 +172,13 @@
     <script>
     !function(e, n, t, i, o, c, s, a) {
         e.TrackingSystemObject = "r", (s = n.createElement(t)).async = 1, s.src = "https://cdn.refersion.com/refersion.js", s.onload = function() {
-            r.pubKey = "pub_e3003ab187fda7b7b034";
-            r.settings.fp_off = true;
-            r.initializeXDLS().then(() => {
-                r.launchDefault()
-            })
+            if (typeof e.r !== 'undefined' && e.r && typeof e.r.launchDefault === 'function') {
+                e.r.pubKey = "pub_e3003ab187fda7b7b034";
+                e.r.settings.fp_off = true;
+                e.r.initializeXDLS().then(() => {
+                    e.r.launchDefault();
+                }).catch(function(err) { console.warn('Refersion init error:', err); });
+            }
         }, (a = n.getElementsByTagName(t)[0]).parentNode.insertBefore(s, a)
     }(window, document, "script");
     </script>
