@@ -95,9 +95,6 @@ const Header = () => {
               <a href="https://www.healingsauna.com/contact" className="text-white/70 hover:text-white transition-colors">
                 Contact
               </a>
-              <Button variant="hero" size="lg" className="mt-2" onClick={handleBuyNow}>
-                Buy Now
-              </Button>
             </nav>
           </div>
         )}
