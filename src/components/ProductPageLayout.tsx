@@ -9,9 +9,9 @@ import saunaCarryBag from "@/assets/sauna-carry-bag.webp";
 import saunaPackageContents from "@/assets/sauna-package-contents.webp";
 import saunaWomanUsing from "@/assets/sauna-woman-using.webp";
 import saunaRoomSetup from "@/assets/sauna-room-setup.webp";
-import saunaRecoveryLifestyle from "@/assets/sauna-recovery-lifestyle.png";
-import saunaWomanMain from "@/assets/sauna-woman-main.png";
-import saunaProductHero from "@/assets/sauna-product-hero.png";
+import saunaRecoveryLifestyle from "@/assets/sauna-recovery-lifestyle.jpg";
+import saunaWomanMain from "@/assets/sauna-woman-main.jpg";
+import saunaProductHero from "@/assets/sauna-product-hero.jpg";
 const ProductPageLayout = () => {
   const [selectedImageMobile, setSelectedImageMobile] = useState(0);
   const [selectedImageDesktop, setSelectedImageDesktop] = useState(0);
