@@ -1,8 +1,6 @@
 import saunaLifestyleValue from "@/assets/sauna-lifestyle-value.png";
-
 const ValueSection = () => {
-  return (
-    <section className="section-light py-20 md:py-28">
+  return <section className="section-light py-20 md:py-28">
       <div className="container-section">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Content */}
@@ -33,11 +31,7 @@ const ValueSection = () => {
           {/* Right - Image with accessories */}
           <div className="relative">
             <div className="bg-muted rounded-2xl p-8 md:p-12">
-              <img
-                src={saunaLifestyleValue}
-                alt="Healing Sauna GO with accessories"
-                className="w-full h-auto rounded-xl"
-              />
+              <img alt="Healing Sauna GO with accessories" className="w-full h-auto rounded-xl" src="/lovable-uploads/fb7653fd-09bb-4f4b-ba29-ae6f463eae31.jpg" />
               
               {/* Included Items */}
               <div className="mt-6 grid grid-cols-2 gap-4">
@@ -62,8 +56,6 @@ const ValueSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ValueSection;
