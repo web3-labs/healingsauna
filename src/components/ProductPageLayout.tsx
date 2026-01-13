@@ -208,13 +208,6 @@ const ProductPageLayout = () => {
               </div>
             </div>
 
-            {/* HSA/FSA Banner */}
-            <div className="flex items-center justify-center gap-2 py-2 text-xs flex-wrap">
-              <span className="font-semibold text-foreground">HSA/FSA eligible</span>
-              <span className="text-primary">✦</span>
-              <span className="text-muted-foreground">Save an average of 30%</span>
-              <span className="text-primary underline cursor-pointer font-medium">Learn more</span>
-            </div>
           </div>
         </div>
 
