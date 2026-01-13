@@ -8,7 +8,7 @@ import saunaGymLifestyle from "@/assets/sauna-gym-lifestyle.png";
 import saunaCarryBag from "@/assets/sauna-carry-bag.webp";
 import saunaPackageContents from "@/assets/sauna-package-contents.webp";
 import saunaWomanUsing from "@/assets/sauna-woman-using.webp";
-import saunaRoomSetup from "@/assets/sauna-room-setup.webp";
+import saunaRoomSetup from "@/assets/sauna-room-setup.png";
 import saunaRecoveryLifestyle from "@/assets/sauna-recovery-lifestyle.jpg";
 import saunaWomanMain from "@/assets/sauna-woman-main.jpg";
 import saunaProductHero from "@/assets/sauna-product-hero.jpg";
