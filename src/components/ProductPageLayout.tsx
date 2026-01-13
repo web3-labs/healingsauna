@@ -16,7 +16,7 @@ const ProductPageLayout = () => {
   const [selectedImageMobile, setSelectedImageMobile] = useState(0);
   const [selectedImageDesktop, setSelectedImageDesktop] = useState(0);
   const [protectionPlan, setProtectionPlan] = useState(false);
-  const images = [saunaProductHero, saunaWomanMain, saunaWomanUsing, saunaRecoveryLifestyle, saunaGymLifestyle, saunaRoomSetup, saunaPackageContents, saunaCarryBag];
+  const images = [saunaProductHero, saunaWomanMain, saunaWomanUsing, saunaRecoveryLifestyle, saunaGymLifestyle, saunaPackageContents, saunaCarryBag];
 
   // Mobile carousel
   const [mobileRef, mobileApi] = useEmblaCarousel({
